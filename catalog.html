@@ -7,7 +7,7 @@
   <body>
     <header>
       <nav>
-        <a href="/">
+        <a href="index.html">
           <img src="logo/140x72" alt="Логотип Седона">
         </a>
         <ul>
@@ -47,18 +47,21 @@
         <div>
           <h3>Стоимость в сутки(Р):</h3>
           <span></span>
-          <button type="button">показать</button>
+          <button type="submit">показать</button>
         </div>
 
         <div>
           <span>найдено: 3</span>
           <p>Сортировка:</p>
           <ul>
-            <li>по цене</li>
-            <li>по типу</li>
-            <li>по рейтингу</li>
+            <li><a>по цене</a></li>
+            <li><a href="">по типу</a></li>
+            <li><a href="">по рейтингу</a></li>
           </ul>
-          <span></span>
+          <span>
+            <a href=""></a><!-- стрелочка вверх -->
+            <a></a><!-- стрелочка вниз -->
+          </span>
         </div>
       </section>
 
@@ -67,9 +70,12 @@
 
         <ul>
           <li>
-            <h3>Amara Resort & Spa</h3>
-            <p><img src="foto/135x90" alt="Фото гостиницы"></p>
-            <p><span>Гостиница</span> <span>от 4000 Р.</span></p>
+            <h3><a href=""> Resort & Spa</a></h3>
+            <img src="foto/135x90" alt="Фото гостиницы">
+            <p>
+              <span>Гостиница</span>
+              <span>от 4000 Р.</span>
+            </p>
             <p>
               <a href="">Подробнее</a>
               <a href="">Забронировать</a>
@@ -80,9 +86,12 @@
             </div>
           </li>
           <li>
-            <h3>Desert Quail Inn</h3>
-            <p><img src="foto/135x90" alt="Фото гостиницы"></p>
-            <p><span>Мотель</span> <span>от 3000 Р.</span></p>
+            <h3><a href="">Desert Quail Inn</a></h3>
+            <img src="foto/135x90" alt="Фото гостиницы">
+            <p>
+              <span>Мотель</span>
+              <span>от 3000 Р.</span>
+            </p>
             <p>
               <a href="">Подробнее</a>
               <a href="">Забронировать</a>
@@ -93,9 +102,12 @@
             </div>
           </li>
           <li>
-            <h3>Villas at Poco Diablo</h3>
-            <p><img src="foto/135x90" alt="Фото гостиницы"></p>
-            <p><span>Апартаменты</span> <span>от 2000 Р.</span></p>
+            <h3><a href="">Villas at Poco Diablo</a></h3>
+            <img src="foto/135x90" alt="Фото гостиницы">
+            <p>
+              <span>Апартаменты</span>
+              <span>от 2000 Р.</span>
+            </p>
             <p>
               <a href="">Подробнее</a>
               <a href="">Забронировать</a>
@@ -112,17 +124,14 @@
     <footer>
       <p>#visitSEDONA</p>
 
-      <div>
-        <ul>
-          <li><a href="">Твитер</a></li>
-          <li><a href="">Фэйсбук</a></li>
-          <li><a href="">Ютуб</a></li>
-        </ul>
-      </div>
+      <ul>
+        <li><a href="">Твитер</a></li>
+        <li><a href="">Фэйсбук</a></li>
+        <li><a href="">Ютуб</a></li>
+      </ul>
 
-      <div>
-        <p>Website by <a><img src="HTMLAcademy_logo/115x41" alt="Логотип HTML academy"></a></p>
-      </div>
+      <!-- отображение логотипа академии заменить на декортативное -->
+      <p>Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="HTMLAcademy_logo/115x41" alt="Логотип HTML academy"></a></p>
     </footer>
   </body>
 </html>
