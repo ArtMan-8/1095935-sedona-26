@@ -4,135 +4,135 @@
     <meta charset="UTF-8">
     <title>HTML Academy: Седона - катлог гостиниц</title>
   </head>
-  <body>
-    <header>
-      <nav>
-        <a href="index.html">
-          <img src="logo/140x72" alt="Логотип Седона"> <!-- логотип Седона img/svg/logo-sedona.svg -->
+  <body class="page">
+    <header class="page__header header">
+      <nav class="header__nav">
+        <a class="header__link" href="index.html">
+          <img class="header__logo" src="logo/140x72" alt="Логотип Седона"> <!-- логотип Седона img/svg/logo-sedona.svg -->
         </a>
-        <ul>
-          <li><a href="">Информация</a></li>
-          <li><a href="">Фото и видео</a></li>
-          <li><a href="">Карта штата</a></li>
-          <li><a>Гостиницы</a></li>
+        <ul class="header-menu__list">
+          <li class="header-menu__item"><a class="header-menu__link" href="">Информация</a></li>
+          <li class="header-menu__item"><a class="header-menu__link" href="">Фото и видео</a></li>
+          <li class="header-menu__item"><a class="header-menu__link" href="">Карта штата</a></li>
+          <li class="header-menu__item"><a class="header-menu__link header-menu__link_current">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <h1>Гостиницы городка Седона</h1>
+    <main class="page__main main">
+      <h1 class="main__header">Гостиницы городка Седона</h1>
 
-      <section>
+      <section class="main__filter-hotel filter-hotel">
+        <h2 class="filter-hotel__header">Подбор гостиниц по критериям</h2>
         <!-- здесь будет форма фильтров выбора гостиниц-->
         <!-- фоновое изображение img/catalog-bg.jpg -->
-        <h2>Подбор гостиниц по критериям</h2>
 
-        <div>
-          <h3>Инфраструктура:</h3>
-          <ul>
-            <li>Бассейн</li>
-            <li>Парковка</li>
-            <li>Wi-Fi</li>
+        <div class="filter-hotel__criterion criterion">
+          <h3 class="criterion__header">Инфраструктура:</h3>
+          <ul class="criterion__list">
+            <li class="criterion__item">Бассейн</li>
+            <li class="criterion__item">Парковка</li>
+            <li class="criterion__item">Wi-Fi</li>
           </ul>
         </div>
 
-        <div>
-          <h3>Тип жилья:</h3>
-          <ul>
-            <li>Гостиница</li>
-            <li>Мотель</li>
-            <li>Апартаменты</li>
+        <div class="filter-hotel__criterion criterion">
+          <h3 class="criterion__header">Тип жилья:</h3>
+          <ul class="criterion__list">
+            <li class="criterion__item">Гостиница</li>
+            <li class="criterion__item">Мотель</li>
+            <li class="criterion__item">Апартаменты</li>
           </ul>
         </div>
 
-        <div>
-          <h3>Стоимость в сутки(Р):</h3>
+        <div class="filter-hotel__criterion criterion">
+          <h3 class="criterion__header">Стоиcriterion__headerмость в сутки(Р):</h3>
           <span></span> <!-- изображение ползунка img/svg/filter-button.svg -->
           <button type="submit">показать</button>
         </div>
 
-        <div>
-          <span>найдено: 3</span>
-          <p>Сортировка:</p>
-          <ul>
-            <li><a>по цене</a></li>
-            <li><a href="">по типу</a></li>
-            <li><a href="">по рейтингу</a></li>
+        <div class="filter-hotel__found found">
+          <span class="found__quantity">найдено: 3</span>
+          <p class="found__sorting sorting">Сортировка:</p>
+          <ul class="sorting__list">
+            <li class="sorting__item"><a class="sorting__link sorting__link_active">по цене</a></li>
+            <li class="sorting__item"><a class="sorting__link" href="">по типу</a></li>
+            <li class="sorting__item"><a class="sorting__link" href="">по рейтингу</a></li>
           </ul>
-          <span>
-            <a></a> <!-- стрелочка вверх img/svg/icon-up-dir.svg -->
-            <a href=""></a> <!-- стрелочка вниз img/svg/icon-down-dir.svg -->
+          <span class="sorting__direction">
+            <a class="sorting__direction_up sorting__direction_active"></a> <!-- стрелочка вверх img/svg/icon-up-dir.svg -->
+            <a class="sorting__direction_down" href=""></a> <!-- стрелочка вниз img/svg/icon-down-dir.svg -->
           </span>
         </div>
       </section>
 
-      <section>
-        <h2>Сортированный список гостиниц</h2>
+      <section class="main__sorted-hotel sorted-hotel">
+        <h2 class="sorted-hotel__header">Сортированный список гостиниц</h2>
 
-        <ol>
-          <li>
-            <h3><a href="">Amara Resort & Spa</a></h3>
-            <img src="img/hotel-1.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & Spa">
-            <p>
-              <span>Гостиница</span>
-              <span>от 4000 Р.</span>
+        <ol class="sorted-hotel__list">
+          <li class="sorted-hotel__item">
+            <h3 class="sorted-hotel__header"><a class="sorted-hotel__link" href="">Amara Resort & Spa</a></h3>
+            <img class="sorted-hotel__foto" src="img/hotel-1.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & Spa">
+            <p class="sorted-hotel__found">
+              <span class="sorted-hotel__found_type">Гостиница</span>
+              <span class="sorted-hotel__found_price">от 4000 Р.</span>
             </p>
-            <p>
-              <a href="">Подробнее</a>
-              <a href="">Забронировать</a>
+            <p class="sorted-hotel__button">
+              <a class="sorted-hotel__button_details" href="">Подробнее</a>
+              <a class="sorted-hotel__button_book" href="">Забронировать</a>
             </p>
-            <div>
-              <span></span> <!-- звёздочки рейтинга img/svg/star.svg -->
-              <p>Рейтинг: 8,5</p>
+            <div class="sorted-hotel__rating">
+              <span class="sorted-hotel__rating_star"></span> <!-- звёздочки рейтинга img/svg/star.svg -->
+              <p class="sorted-hotel__rating_text">Рейтинг: 8,5</p>
             </div>
           </li>
-          <li>
-            <h3><a href="">Desert Quail Inn</a></h3>
-            <img src="img/hotel-2.jpg" width="135" height="90" alt="Фото мотеля Desert Quail Inn">
-            <p>
-              <span>Мотель</span>
-              <span>от 3000 Р.</span>
+          <li class="sorted-hotel__item">
+            <h3 class="sorted-hotel__header"><a class="sorted-hotel__link" href="">Desert Quail Inn</a></h3>
+            <img class="sorted-hotel__foto" src="img/hotel-2.jpg" width="135" height="90" alt="Фото мотеля Desert Quail Inn">
+            <p class="sorted-hotel__found">
+              <span class="sorted-hotel__found_type">Мотель</span>
+              <span class="sorted-hotel__found_price">от 3000 Р.</span>
             </p>
-            <p>
-              <a href="">Подробнее</a>
-              <a href="">Забронировать</a>
+            <p class="sorted-hotel__button">
+              <a class="sorted-hotel__button_details" href="">Подробнее</a>
+              <a class="sorted-hotel__button_book" href="">Забронировать</a>
             </p>
-            <div>
-              <span></span> <!-- звёздочки рейтинга img/svg/star.svg -->
-              <p>Рейтинг: 8,9</p>
+            <div class="sorted-hotel__rating">
+              <span class="sorted-hotel__rating_star"></span> <!-- звёздочки рейтинга img/svg/star.svg -->
+              <p class="sorted-hotel__rating_text">Рейтинг: 8,9</p>
             </div>
           </li>
-          <li>
-            <h3><a href="">Villas at Poco Diablo</a></h3>
-            <img src="img/hotel-3.jpg" width="135" height="90" alt="Фото апартаментов Villas at Poco Diablo">
-            <p>
-              <span>Апартаменты</span>
-              <span>от 2000 Р.</span>
+          <li class="sorted-hotel__item">
+            <h3 class="sorted-hotel__header"><a class="sorted-hotel__link" href="">Villas at Poco Diablo</a></h3>
+            <img class="sorted-hotel__foto" src="img/hotel-3.jpg" width="135" height="90" alt="Фото апартаментов Villas at Poco Diablo">
+            <p class="sorted-hotel__found">
+              <span class="sorted-hotel__found_type">Апартаменты</span>
+              <span class="sorted-hotel__found_price">от 2000 Р.</span>
             </p>
-            <p>
-              <a href="">Подробнее</a>
-              <a href="">Забронировать</a>
+            <p class="sorted-hotel__button">
+              <a class="sorted-hotel__button_details" href="">Подробнее</a>
+              <a class="sorted-hotel__button_book" href="">Забронировать</a>
             </p>
-            <div>
-              <span></span> <!-- звёздочки рейтинга img/svg/star.svg -->
-              <p>Рейтинг: 9,2</p>
+            <div class="sorted-hotel__rating">
+              <span class="sorted-hotel__rating_star"></span> <!-- звёздочки рейтинга img/svg/star.svg -->
+              <p class="sorted-hotel__rating_text">Рейтинг: 9,2</p>
             </div>
           </li>
         </ol>
       </section>
     </main>
 
-    <footer>
-      <p>#visitSEDONA</p>
+    <footer class="page__footer footer">
+      <p class="footer__social-hashtag">#visitSEDONA</p>
 
-      <ul>
-        <li><a href="">Твитер</a></li> <!-- иконка img/svg/twitter.svg -->
-        <li><a href="">Фэйсбук</a></li> <!-- иконка img/svg/fb-icon.svg -->
-        <li><a href="">Ютуб</a></li> <!-- иконка img/svg/youtube.svg -->
+      <ul class="footer__social-list">
+        <li class="footer__social-item"><a class="footer__social-link" href="">Твитер</a></li> <!-- иконка img/svg/twitter.svg -->
+        <li class="footer__social-item"><a class="footer__social-link" href="">Фэйсбук</a></li> <!-- иконка img/svg/fb-icon.svg -->
+        <li class="footer__social-item"><a class="footer__social-link" href="">Ютуб</a></li> <!-- иконка img/svg/youtube.svg -->
       </ul>
 
       <!-- логотип академии img/svg/logo-htmlacademy.svg -->
-      <p>Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="HTMLAcademy_logo/115x41" alt="Логотип HTML academy"></a></p>
+      <p class="footer__copyright">Website by <a class="footer__copylink" href="https://htmlacademy.ru/intensive/htmlcss"><img class="footer__copylogo" src="HTMLAcademy_logo/115x41" alt="Логотип HTML academy"></a></p>
     </footer>
   </body>
 </html>
