@@ -77,12 +77,28 @@
       </section>
 
       <section class="main__search-hotel search-hotel">
-        <h2 class="search-hotel__header">Заинтересовались?</h2>
-
-        <p>Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в Седоне</p>
-        <!-- здесь будет форма для поиска гостиницы -->
         <!-- в форме используется изображение календаря img/svg/calendar.svg -->
+        <h2 class="search-hotel__header">Заинтересовались?</h2>
+        <p>Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в Седоне</p>
+
         <button type="button">Поиск гостиницы в Седоне</button>
+        <form action="" method="GET">
+          <p>
+            <label for="date-arrival">Дата заезда:</label>
+            <input id="date-arrival" type="date">
+          </p>
+          <p>
+            <label for="date-leave">Дата выезда:</label>
+            <input id="date-leave" type="date">
+          </p>
+          <p>
+            <label for="adult-ticket">Взрослые:</label>
+            <input id="adult-ticket" type="number">
+            <label for="children-ticket">Дети:</label>
+            <input id="children-ticket" type="number">
+          </p>
+          <a href="">Найти</a>
+        </form>
 
         <img class="search-hotel__map" src="img/map.png" width="1200" height="594" alt="Карта как проехать к городку Седона">
       </section>
