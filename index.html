@@ -39,16 +39,16 @@
             <img class="features__foto" src="img/feature-1.jpg" width="800" height="256" alt="Фотография городка Седона">
 
             <ul class="promo features__promo">
-              <li class="promo__item">
-                <h4 class="promo__header">Жильё</h4> <!-- иконка домика img/svg/icon-1.svg -->
+              <li class="promo__item promo__item--house"> <!-- иконка домика img/svg/icon-1.svg -->
+                <h4 class="promo__header">Жильё</h4>
                 <p class="promo__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
-              <li class="promo__item">
-                <h4 class="promo__header">Еда</h4> <!-- иконка еды img/svg/icon-3.svg -->
+              <li class="promo__item promo__item--food"> <!-- иконка еды img/svg/icon-3.svg -->
+                <h4 class="promo__header">Еда</h4>
                 <p class="promo__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
-              <li class="promo__item">
-                <h4 class="promo__header">Сувениры</h4> <!-- иконка сувениров img/svg/icon-2.svg -->
+              <li class="promo__item promo__item--gift"> <!-- иконка сувениров img/svg/icon-2.svg -->
+                <h4 class="promo__header">Сувениры</h4>
                 <p class="promo__text">Не только китайского, но и местного производства!</p>
               </li>
             </ul>
@@ -81,11 +81,12 @@
       <section class="search-hotel">
         <!-- в форме используется изображение календаря img/svg/calendar.svg -->
         <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+
         <p>Заинтересовались?</p>
         <p>Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в Седоне</p>
 
+        <button class="form-search-show" type="button">Поиск гостиницы в Седоне</button>
         <form class="form-search" action="" method="GET">
-          <button class="form-search__show" type="button">Поиск гостиницы в Седоне</button>
           <p class="form-search__row">
             <label class="form-search__label" for="date-arrival">Дата заезда:</label>
             <input class="form-search__input" id="date-arrival" type="date">
