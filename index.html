@@ -5,38 +5,40 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body class="page">
-    <header class="page__header header">
-      <nav class="header__nav">
-        <a class="header__link" href="index.html">
-          <img class="header__logo" src="logo/140x72" alt="Логотип Седона"> <!-- логотип Седона img/svg/logo-sedona.svg -->
+    <header class="page-header">
+      <nav class="page-header__nav">
+        <a class="page-header__logo-link" href="index.html">
+          <img class="page-header__logo" src="logo/140x72" alt="Логотип Седона"> <!-- логотип Седона img/svg/logo-sedona.svg -->
         </a>
-        <ul class="header-menu__list">
-          <li class="header-menu__item"><a class="header-menu__link" href="">Информация</a></li>
-          <li class="header-menu__item"><a class="header-menu__link" href="">Фото и видео</a></li>
-          <li class="header-menu__item"><a class="header-menu__link" href="">Карта штата</a></li>
-          <li class="header-menu__item"><a class="header-menu__link" href="catalog.html">Гостиницы</a></li>
+        <ul class="page-header__menu-list">
+          <li class="page-header__menu-item"><a class="page-header__menu-link" href="">Информация</a></li>
+          <li class="page-header__menu-item"><a class="page-header__menu-link" href="">Фото и видео</a></li>
+          <li class="page-header__menu-item"><a class="page-header__menu-link" href="">Карта штата</a></li>
+          <li class="page-header__menu-item"><a class="page-header__menu-link page-header__menu-link--current">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="page__main main">
-      <h1 class="main__header">Городок Седона</h1>
+    <main class="page-main">
+      <h1 class="visually-hidden">Городок Седона - место впечатлений</h1>
       <!-- фоновое изображение  img/index-bg.jpg -->
       <!-- маска для фона img/svg/intro-mask.svg -->
       <!-- приветствие на фоне img/svg/intro-welcome.svg -->
 
-      <section class="main__features features">
-        <h2 class="features__header">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+      <section class="features">
+        <h2 class="features__header">Преимущества городка Седона</h2>
 
-        <p class="features__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+        <p class="features__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+
         <ol class="features__list">
-          <li class="features__item item">
-            <h3 class="item__header">Настоящий городок</h3>
-            <span class="item__number">№1</span>
-            <p class="item__description">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
-            <img class="item__foto" src="img/feature-1.jpg" width="800" height="256" alt="Фотография городка Седона">
+          <li class="features__item">
+            <h3 class="features__subheader">Настоящий городок</h3>
+            <span class="features__number">№1</span>
+            <p class="features__description">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+            <img class="features__foto" src="img/feature-1.jpg" width="800" height="256" alt="Фотография городка Седона">
 
-            <ul class="item__promo promo">
+            <ul class="promo features__promo">
               <li class="promo__item">
                 <h4 class="promo__header">Жильё</h4> <!-- иконка домика img/svg/icon-1.svg -->
                 <p class="promo__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
@@ -52,69 +54,70 @@
             </ul>
           </li>
 
-          <li class="features__item item">
-            <h3 class="item__header">Там есть мост дьявола</h3>
-            <span class="item__number">№2</span>
-            <p class="item__description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-            <img class="item__foto" src="img/feature-2.jpg" width="800" height="256" alt="Фотография моста дьявола">
+          <li class="features__item">
+            <h3 class="features__subheader">Там есть мост дьявола</h3>
+            <span class="features__number">№2</span>
+            <p class="features__description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <img class="features__foto" src="img/feature-2.jpg" width="800" height="256" alt="Фотография моста дьявола">
           </li>
           <li class="features__item item">
-            <h3 class="item__header">Небольшая площадь</h3>
-            <span class="item__number">№3</span>
-            <p class="item__description">Все достопримечательности находяться очень близко</p>
+            <h3 class="features__subheader">Небольшая площадь</h3>
+            <span class="features__number">№3</span>
+            <p class="features__description">Все достопримечательности находяться очень близко</p>
           </li>
           <li class="features__item item">
-            <h3 class="item__header">Красивая дорога</h3>
-            <span class="item__number">№4</span>
-            <p class="item__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <h3 class="features__subheader">Красивая дорога</h3>
+            <span class="features__number">№4</span>
+            <p class="features__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
           <li class="features__item item">
-            <h3 class="item__header">Мало туристов</h3>
-            <span class="item__number">№5</span>
-            <p class="item__description">Большинство едет в Гранд Каньон и толпиться там</p>
+            <h3 class="features__subheader">Мало туристов</h3>
+            <span class="features__number">№5</span>
+            <p class="features__description">Большинство едет в Гранд Каньон и толпиться там</p>
           </li>
         </ol>
       </section>
 
-      <section class="main__search-hotel search-hotel">
+      <section class="search-hotel">
         <!-- в форме используется изображение календаря img/svg/calendar.svg -->
-        <h2 class="search-hotel__header">Заинтересовались?</h2>
+        <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+        <p>Заинтересовались?</p>
         <p>Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в Седоне</p>
 
-        <button type="button">Поиск гостиницы в Седоне</button>
-        <form action="" method="GET">
-          <p>
-            <label for="date-arrival">Дата заезда:</label>
-            <input id="date-arrival" type="date">
+        <form class="form-search" action="" method="GET">
+          <button class="form-search__show" type="button">Поиск гостиницы в Седоне</button>
+          <p class="form-search__row">
+            <label class="form-search__label" for="date-arrival">Дата заезда:</label>
+            <input class="form-search__input" id="date-arrival" type="date">
           </p>
-          <p>
-            <label for="date-leave">Дата выезда:</label>
-            <input id="date-leave" type="date">
+          <p class="form-search__row">
+            <label class="form-search__label" for="date-leave">Дата выезда:</label>
+            <input class="form-search__input" id="date-leave" type="date">
           </p>
-          <p>
-            <label for="adult-ticket">Взрослые:</label>
-            <input id="adult-ticket" type="number">
-            <label for="children-ticket">Дети:</label>
-            <input id="children-ticket" type="number">
+          <p class="form-search__row">
+            <label class="form-search__label" for="adult-ticket">Взрослые:</label>
+            <input class="form-search__input" id="adult-ticket" type="number">
+            <label class="form-search__label" for="children-ticket">Дети:</label>
+            <input class="form-search__input" id="children-ticket" type="number">
           </p>
-          <a href="">Найти</a>
+          <a class="form-search__find" href="">Найти</a>
         </form>
 
         <img class="search-hotel__map" src="img/map.png" width="1200" height="594" alt="Карта как проехать к городку Седона">
       </section>
     </main>
 
-    <footer class="page__footer footer">
-      <p class="footer__social-hashtag">#visitSEDONA</p>
+    <footer class="page-footer">
+      <p class="page-footer__social-hashtag">#visitSEDONA</p>
 
-      <ul class="footer__social-list">
-        <li class="footer__social-item"><a class="footer__social-link footer__social-link_tw" href="">Твитер</a></li> <!-- иконка img/svg/twitter.svg -->
-        <li class="footer__social-item"><a class="footer__social-link footer__social-link_fb" href="">Фэйсбук</a></li> <!-- иконка img/svg/fb-icon.svg -->
-        <li class="footer__social-item"><a class="footer__social-link footer__social-link_youtube" href="">Ютуб</a></li> <!-- иконка img/svg/youtube.svg -->
+      <ul class="page-footer__social-list">
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link_tw" href="">Твитер</a></li> <!-- иконка img/svg/twitter.svg -->
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link_fb" href="">Фэйсбук</a></li> <!-- иконка img/svg/fb-icon.svg -->
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link_youtube" href="">Ютуб</a></li> <!-- иконка img/svg/youtube.svg -->
       </ul>
 
       <!-- логотип академии img/svg/logo-htmlacademy.svg -->
-      <p class="footer__copyright">Website by <a class="footer__copylink" href="https://htmlacademy.ru/intensive/htmlcss"><img class="footer__copylogo" src="HTMLAcademy_logo/115x41" alt="Логотип HTML academy"></a></p>
+      <p class="page-footer__copyright">Website by <a class="page-footer__copylink" href="https://htmlacademy.ru/intensive/htmlcss"><img class="page-footer__copylogo" src="HTMLAcademy_logo/115x41" alt="Логотип HTML academy"></a></p>
     </footer>
   </body>
 </html>
