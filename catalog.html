@@ -23,10 +23,52 @@
       <h1 class="main__header">Гостиницы городка Седона</h1>
 
       <section class="main__filter-hotel filter-hotel">
-        <h2 class="filter-hotel__header">Подбор гостиниц по критериям</h2>
-        <!-- здесь будет форма фильтров выбора гостиниц-->
         <!-- фоновое изображение img/catalog-bg.jpg -->
+        <h2 class="filter-hotel__header">Подбор гостиниц по критериям</h2>
+        <form action="" method="get">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="" id="filter-pool" checked>
+                <label for="filter-pool">Бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="filter-parking">
+                <label for="filter-parking">Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="filter-wifi">
+                <label for="filter-wifi">WI-FI</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="" id="filter-hotel" checked>
+                <label for="filter-hotel">Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="filter-motel" checked>
+                <label for="filter-motel">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="filter-apartment" checked>
+                <label for="filter-apartment">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
+            <span></span> <!-- изображение ползунка img/svg/filter-button.svg -->
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
+      </section>
 
+      <!-- <section>
         <div class="filter-hotel__criterion criterion">
           <h3 class="criterion__header">Инфраструктура:</h3>
           <ul class="criterion__list">
@@ -47,9 +89,11 @@
 
         <div class="filter-hotel__criterion criterion">
           <h3 class="criterion__header">Стоимость в сутки(Р):</h3>
-          <span></span> <!-- изображение ползунка img/svg/filter-button.svg -->
-          <button type="submit">показать</button>
         </div>
+      </section> -->
+
+      <section class="main__sorted-hotel sorted-hotel">
+        <h2 class="sorted-hotel__header">Сортированный список гостиниц</h2>
 
         <div class="filter-hotel__found found">
           <span class="found__quantity">найдено: 3</span>
@@ -64,10 +108,6 @@
             <a class="sorting__direction_down" href=""></a> <!-- стрелочка вниз img/svg/icon-down-dir.svg -->
           </span>
         </div>
-      </section>
-
-      <section class="main__sorted-hotel sorted-hotel">
-        <h2 class="sorted-hotel__header">Сортированный список гостиниц</h2>
 
         <ol class="sorted-hotel__list">
           <li class="sorted-hotel__item">
