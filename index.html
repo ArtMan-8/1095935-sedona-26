@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
-  <body class="page">
+  <body>
     <header class="page-header">
       <nav class="page-header__nav">
         <a class="page-header__logo-link" href="index.html">
@@ -26,7 +26,7 @@
       <!-- приветствие на фоне img/svg/intro-welcome.svg -->
 
       <section class="features">
-        <h2 class="features__header">Преимущества городка Седона</h2>
+        <h2 class="features__header" tabindex="0">Преимущества городка Седона</h2>
 
         <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="features__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
@@ -86,22 +86,22 @@
         <p>Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в Седоне</p>
 
         <button class="form-search-show" type="button">Поиск гостиницы в Седоне</button>
-        <form class="form-search" action="" method="GET">
-          <p class="form-search__row">
+        <form class="form-search" action="" method="GET" aria-label="Поиск готиницы в Седоне">
+          <div class="form-search__row">
             <label class="form-search__label" for="date-arrival">Дата заезда:</label>
-            <input class="form-search__input" id="date-arrival" type="date">
-          </p>
-          <p class="form-search__row">
+            <input class="form-search__input" id="date-arrival" type="text">
+          </div>
+          <div class="form-search__row">
             <label class="form-search__label" for="date-leave">Дата выезда:</label>
-            <input class="form-search__input" id="date-leave" type="date">
-          </p>
-          <p class="form-search__row">
+            <input class="form-search__input" id="date-leave" type="text">
+          </div>
+          <div class="form-search__row">
             <label class="form-search__label" for="adult-ticket">Взрослые:</label>
             <input class="form-search__input" id="adult-ticket" type="number">
             <label class="form-search__label" for="children-ticket">Дети:</label>
             <input class="form-search__input" id="children-ticket" type="number">
-          </p>
-          <a class="form-search__find" href="">Найти</a>
+          </div>
+          <button type="submit">Найти</button>
         </form>
 
         <img class="search-hotel__map" src="img/map.png" width="1200" height="594" alt="Карта как проехать к городку Седона">
@@ -112,9 +112,9 @@
       <p class="page-footer__social-hashtag">#visitSEDONA</p>
 
       <ul class="page-footer__social-list">
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link_tw" href="">Твитер</a></li> <!-- иконка img/svg/twitter.svg -->
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link_fb" href="">Фэйсбук</a></li> <!-- иконка img/svg/fb-icon.svg -->
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link_youtube" href="">Ютуб</a></li> <!-- иконка img/svg/youtube.svg -->
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link_tw" href="" aria-label="Седона в твитере">Твитер</a></li> <!-- иконка img/svg/twitter.svg -->
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link_fb" href="" aria-label="Седона на фейсбуке">Фэйсбук</a></li> <!-- иконка img/svg/fb-icon.svg -->
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link_youtube" href="" aria-label="Седона на ютубе">Ютуб</a></li> <!-- иконка img/svg/youtube.svg -->
       </ul>
 
       <!-- логотип академии img/svg/logo-htmlacademy.svg -->
