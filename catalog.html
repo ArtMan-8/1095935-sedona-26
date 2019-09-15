@@ -60,19 +60,11 @@
           </fieldset>
 
           <fieldset class="form-filter__set">
-            <legend class="form-filter__legend" tabindex="0">Стоимость в сутки (Р):</legend>
+            <input type="range" min="0" max="5000" value="0" step="100" name="filterPrice" id="filterPriceMin" oninput="minPrice.value = filterPriceMin.valueAsNumber">
+            <output for="filterPriceMin" name="minPrice" id="minPrice">0</output>
 
-            <form oninput="minPrice.value = filterPriceMin.valueAsNumber">
-              <input type="range" min="0" max="5000" value="0" step="100" name="filterPriceMin" id="filterPriceMin"> <!-- изображение ползунка img/svg/filter-button.svg -->
-              <output for="filterPriceMin" name="minPrice">0</output>
-              <label for="filterPriceMin" aria-label="выбор минимальной цены"></label>
-            </form>
-
-            <form oninput="maxPrice.value = filterPriceMax.valueAsNumber">
-              <input type="range" min="0" max="5000" value="3000" step="100" name="filterPriceMax" id="filterPriceMax"> <!-- изображение ползунка img/svg/filter-button.svg -->
-              <output for="filterPriceMax" name="maxPrice">3000</output>
-              <label for="filterPriceMax" aria-label="выбор максимальной цены"></label>
-            </form>
+            <input type="range" min="0" max="5000" value="3000" step="100" name="filterPrice" id="filterPriceMax" oninput="maxPrice.value = filterPriceMax.valueAsNumber">
+            <output for="filterPriceMax" name="maxPrice" id="maxPrice">3000</output>
           </fieldset>
 
           <button type="submit">Показать</button>
