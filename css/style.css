@@ -74,6 +74,7 @@ a {
 .features__item {
   text-align: center;
   min-height: 256px;
+  background-color: #efefef;
 }
 
 .features__item:nth-child(-n+2) {
