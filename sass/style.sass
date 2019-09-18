@@ -1,0 +1,258 @@
+/* common style */
+body
+  width: 1200px
+  margin: 0 auto
+  padding: 0
+
+  font-size: 14px
+  line-height: 21px
+  font-family: "PT Sans", "Arial", sans-serif
+  color: #000000
+  text-transform: uppercase
+
+  background-color: #f2f2f2
+
+a
+  text-decoration: none
+
+.visually-hidden
+  position: absolute
+
+  width: 1px
+  height: 1px
+  margin: -1px
+  overflow: hidden
+
+  clip: rect(0 0 0 0)
+
+.page-header
+  font-weight: bold
+  line-height: 26px
+
+  background-color: #ffffff
+
+  &__menu-list
+    list-style: none
+
+  &__menu-link:hover
+    color: #81b3d2
+
+  &__menu-link:active
+    color: rgba(0, 0, 0, 0.3)
+
+  &__menu-link--current
+    color: #766357
+
+.page-main
+  background-color: #ffffff
+
+/* index.html style */
+.banner
+  background-image: url("../img/index-bg.jpg")
+  background-repeat: no-repeat
+  background-position: center
+
+.features
+
+  &__text
+    line-height: 26px
+    text-align: center
+
+    &--big
+      font-weight: bold
+      font-size: 21px
+
+    &__list
+    list-style: none
+
+  &__item
+    min-height: 256px
+
+    text-align: center
+
+    background-color: #efefef
+
+    &:nth-child(-n+2)
+      color: #ffffff
+
+      background-color: #81b3d2
+
+    &__subheader
+    font-weight: bold
+    font-size: 21px
+
+.promo
+  list-style: none
+  color: #000000
+
+  background-color: #ffffff
+
+  &__item
+    min-height: 330px
+
+  &__header
+    font-weight: bold
+    font-size: 21px
+
+.search-hotel
+  background-color: #ffffff
+
+  &__text
+    line-height: 24px
+
+    &--big
+      font-weight: bold
+      font-size: 30px
+      line-height: 36px
+
+.form-search-show
+  font-weight: bold
+  font-size: 21px
+  line-height: 26px
+  color: #ffffff
+  text-transform: uppercase
+
+  background-color: #766357
+  border: none
+
+.form-search
+  font-weight: bold
+  line-height: 26px
+
+  &__input
+    background-color: #f2f2f2
+    border: none
+
+  &__submit
+    font-weight: bold
+    font-size: 21px
+    line-height: 26px
+    color: #ffffff
+    text-transform: uppercase
+
+    background-color: #81b3d2
+    border: none
+
+.page-footer
+  text-align: center
+
+  background-color: #ffffff
+  opacity: 0.9
+
+  &__social-hashtag
+    font-weight: bold
+    font-size: 21px
+    line-height: 26px
+
+  &__social-list
+    list-style: none
+
+  &__copyright
+    font-size: 14px
+    line-height: 26px
+
+
+  /* catalog.html style*/
+.form-filter
+  color: #ffffff
+
+  background-color: #81b3d2
+  background-image: url("../img/catalog-bg.jpg")
+  background-repeat: no-repeat
+  background-position: center
+
+  &__set
+    border: none
+
+  &__legend
+    font-weight: bold
+    font-size: 16px
+
+  &__row
+    font-size: 14px
+    line-height: 21px
+
+  &__check
+    font-size: 14px
+    line-height: 21px
+
+    opacity: 0
+
+  &__text
+    font-size: 14px
+    line-height: 21px
+
+  &__submit
+    line-height: 21px
+    text-transform: uppercase
+
+    border: none
+
+.sorted-hotel
+  color: #000000
+
+  &__found
+    font-size: 12px
+    line-height: 18px
+
+  &__quantity
+    font-weight: bold
+    font-size: 21px
+    line-height: 26px
+
+  &__list
+    list-style: none
+
+  &__type-sort
+    color: rgba(0, 0, 0, 0.3)
+    text-decoration: underline dotted #81b3d2
+
+    &:hover
+      color: #81b3d2
+      text-decoration: underline dotted #81b3d2
+
+    &:active
+      color: #000000
+      text-decoration: none
+
+    &--active
+      color: #81b3d2
+      text-decoration: none
+
+    &__header
+    font-weight: bold
+    font-size: 21px
+    line-height: 26px
+
+  &__link
+    color: #000000
+
+  &__btn
+    font-weight: bold
+    color: #ffffff
+
+    &--details
+      background-color: #81b3d2
+
+      &:hover
+        background-color: #669ec0
+
+      &:active
+        color: rgba(255, 255, 255, 0.3)
+
+        background-color: #5496bd
+
+      &--book
+      background-color: #766357
+
+      &:hover
+        background-color: #604e43
+
+      &:active
+        color: rgba(255, 255, 255, 0.3)
+
+        background-color: #503e33
+
+      &__text
+    color: #666666
+
