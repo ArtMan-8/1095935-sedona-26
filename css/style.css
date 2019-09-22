@@ -162,7 +162,7 @@ a {
   line-height: 26px;
 }
 
-.page-footer__copylink {
+.page-footer__copylogo {
   vertical-align: middle;
 }
 
@@ -498,6 +498,13 @@ a {
 
 .sorted-hotel {
   color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .sorted-hotel__found {
@@ -509,7 +516,7 @@ a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 31px 72px;
+  margin: 31px 72px;
 }
 
 .sorted-hotel__quantity {
@@ -574,6 +581,7 @@ a {
 }
 
 .sorted-hotel__arrow--down {
+  margin-left: 12px;
   background-image: url("../img/svg/icon-down-dir.svg");
 }
 
@@ -582,7 +590,7 @@ a {
           box-sizing: border-box;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
-  padding: 30px 72px;
+  padding: 31px 72px;
 }
 
 .sorted-hotel__header {

@@ -124,6 +124,8 @@ a
     line-height: 26px
 
   &__copylink
+
+  &__copylogo
     vertical-align: middle
 
 /* index.html style */
@@ -391,13 +393,15 @@ a
 
 .sorted-hotel
   color: #000000
+  display: flex
+  flex-direction: column
 
   &__found
     font-size: 12px
     line-height: 18px
     display: flex
     align-items: flex-end
-    padding: 31px 72px
+    margin: 31px 72px
 
   &__quantity
     font-weight: bold
@@ -444,13 +448,14 @@ a
       background-image: url("../img/svg/icon-up-dir.svg")
 
     &--down
+      margin-left: 12px
       background-image: url("../img/svg/icon-down-dir.svg")
 
   &__article
     box-sizing: border-box
     border-top: 1px solid #e6e6e6
     border-bottom: 1px solid #e6e6e6
-    padding: 30px 72px
+    padding: 31px 72px
 
   &__header
     font-weight: bold
