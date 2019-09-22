@@ -10,10 +10,10 @@
   </head>
   <body>
     <header class="page-header">
+      <a class="page-header__logo-link" href="index.html">
+        <img class="page-header__logo" src="img/svg/logo-sedona.svg" width="140" height="71" alt="Логотип Седона"> <!-- логотип Седона img/svg/logo-sedona.svg -->
+      </a>
       <nav class="page-header__nav">
-        <a class="page-header__logo-link" href="index.html">
-          <img class="page-header__logo" src="logo/140x72" alt="Логотип Седона"> <!-- логотип Седона img/svg/logo-sedona.svg -->
-        </a>
         <ul class="page-header__menu-list">
           <li class="page-header__menu-item"><a class="page-header__menu-link" href="">Информация</a></li>
           <li class="page-header__menu-item"><a class="page-header__menu-link" href="">Фото и видео</a></li>
@@ -24,8 +24,12 @@
     </header>
 
     <main class="page-main">
-      <h1 class="visually-hidden">Городок Седона - место впечатлений</h1>
       <section class="banner">
+        <h1 class="visually-hidden">Городок Седона - место впечатлений</h1>
+        <div class="banner__foto"></div>
+        <div class="banner__intro"></div>
+        <div class="banner__mask"></div>
+
         <!-- фоновое изображение  img/index-bg.jpg -->
         <!-- маска для фона img/svg/intro-mask.svg -->
         <!-- приветствие на фоне img/svg/intro-welcome.svg -->
@@ -79,35 +83,35 @@
           <li class="features__item item">
             <h3 class="features__subheader">Мало туристов</h3>
             <span class="features__number">№5</span>
-            <p class="features__description" tabindex="0">Большинство едет в Гранд Каньон и толпиться там</p>
+            <p class="features__description" tabindex="0">Большинство едет в Гранд Каньон и&nbsp;толпиться там</p>
           </li>
         </ol>
       </section>
 
       <section class="search-hotel">
-        <!-- в форме используется изображение календаря img/svg/calendar.svg -->
         <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
 
         <p class="search-hotel__text search-hotel__text--big">Заинтересовались?</p>
-        <p class="search-hotel__text">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в Седоне</p>
+        <p class="search-hotel__text">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в Седоне</p>
 
-        <button class="form-search-show" type="button">Поиск гостиницы в Седоне</button>
+        <!-- в форме используется изображение календаря img/svg/calendar.svg -->
+        <button class="form-search-show btn" type="button">Поиск гостиницы в Седоне</button>
         <form class="form-search" action="https://echo.htmlacademy.ru/" method="GET" aria-label="Поиск готиницы в Седоне">
           <div class="form-search__row">
             <label class="form-search__label" for="date-arrival">Дата заезда:</label>
-            <input class="form-search__input" id="date-arrival" type="text">
+            <input class="form-search__text" id="date-arrival" type="text" placeholder="24 апреля 2017">
           </div>
           <div class="form-search__row">
             <label class="form-search__label" for="date-leave">Дата выезда:</label>
-            <input class="form-search__input" id="date-leave" type="text">
+            <input class="form-search__text" id="date-leave" type="text" placeholder="4 июля 2017">
           </div>
           <div class="form-search__row">
             <label class="form-search__label" for="adult-ticket">Взрослые:</label>
-            <input class="form-search__input" id="adult-ticket" type="number">
+            <input class="form-search__number" id="adult-ticket" type="number" placeholder="2">
             <label class="form-search__label" for="children-ticket">Дети:</label>
-            <input class="form-search__input" id="children-ticket" type="number">
+            <input class="form-search__number" id="children-ticket" type="number" placeholder="0">
           </div>
-          <button class="form-search__submit" type="submit">Найти</button>
+          <button class="form-search__submit btn" type="submit">Найти</button>
         </form>
 
         <img class="search-hotel__map" src="img/map.png" width="1200" height="594" alt="Карта как проехать к городку Седона">
@@ -118,13 +122,16 @@
       <p class="page-footer__social-hashtag">#visitSEDONA</p>
 
       <ul class="page-footer__social-list">
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link_tw" href="" aria-label="Седона в твитере">Твитер</a></li> <!-- иконка img/svg/twitter.svg -->
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link_fb" href="" aria-label="Седона на фейсбуке">Фэйсбук</a></li> <!-- иконка img/svg/fb-icon.svg -->
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link_youtube" href="" aria-label="Седона на ютубе">Ютуб</a></li> <!-- иконка img/svg/youtube.svg -->
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--tw" href="" aria-label="Седона в твитере">Твитер</a></li> <!-- иконка img/svg/twitter.svg -->
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--fb" href="" aria-label="Седона на фейсбуке">Фэйсбук</a></li> <!-- иконка img/svg/fb-icon.svg -->
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--youtube" href="" aria-label="Седона на ютубе">Ютуб</a></li> <!-- иконка img/svg/youtube.svg -->
       </ul>
 
-      <!-- логотип академии img/svg/logo-htmlacademy.svg -->
-      <p class="page-footer__copyright">Website by <a class="page-footer__copylink" href="https://htmlacademy.ru/intensive/htmlcss"><img class="page-footer__copylogo" src="HTMLAcademy_logo/115x41" alt="Логотип HTML academy"></a></p>
+      <p class="page-footer__copyright">Website by
+        <a class="page-footer__copylink" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img class="page-footer__copylogo" src="../img/svg/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML academy">
+        </a>
+      </p>
     </footer>
   </body>
 </html>

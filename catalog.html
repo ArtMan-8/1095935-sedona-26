@@ -10,10 +10,10 @@
   </head>
   <body>
     <header class="page-header">
+      <a class="page-header__logo-link" href="index.html">
+        <img class="page-header__logo" src="img/svg/logo-sedona.svg" width="140" height="71" alt="Логотип Седона"> <!-- логотип Седона img/svg/logo-sedona.svg -->
+      </a>
       <nav class="page-header__nav">
-        <a class="page-header__logo-link" href="index.html">
-          <img class="page-header__logo" src="logo/140x72" alt="Логотип Седона"> <!-- логотип Седона img/svg/logo-sedona.svg -->
-        </a>
         <ul class="page-header__menu-list">
           <li class="page-header__menu-item"><a class="page-header__menu-link" href="">Информация</a></li>
           <li class="page-header__menu-item"><a class="page-header__menu-link" href="">Фото и видео</a></li>
@@ -68,10 +68,10 @@
 
             <div class="form-filter__price-value">
               <label class="form-filter__price form-filter__price--min">от
-                <input type="form-filter__text" name="price-min" value="0">
+                <input class="form-filter__text" type="number" name="price-min" value="0">
               </label>
               <label class="form-filter__price form-filter__price--max">до
-                <input type="form-filter__text" name="price-max" value="3000">
+                <input class="form-filter__text" type="number" name="price-max" value="3000">
               </label>
             </div>
 
@@ -83,7 +83,7 @@
               <div class="form-filter__toggle form-filter__toggle--max"></div>
             </div>
 
-            <button class="form-filter__submit" type="submit">Показать</button>
+            <button class="form-filter__submit btn" type="submit">Показать</button>
           </fieldset>
 
         </form>
@@ -163,13 +163,16 @@
       <p class="page-footer__social-hashtag">#visitSEDONA</p>
 
       <ul class="page-footer__social-list">
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link_tw" href="" aria-label="Седона в твитере">Твитер</a></li> <!-- иконка img/svg/twitter.svg -->
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link_fb" href="" aria-label="Седона на фейсбуке">Фэйсбук</a></li> <!-- иконка img/svg/fb-icon.svg -->
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link_youtube" href="" aria-label="Седона на ютубе">Ютуб</a></li> <!-- иконка img/svg/youtube.svg -->
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--tw" href="" aria-label="Седона в твитере">Твитер</a></li> <!-- иконка img/svg/twitter.svg -->
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--fb" href="" aria-label="Седона на фейсбуке">Фэйсбук</a></li> <!-- иконка img/svg/fb-icon.svg -->
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--youtube" href="" aria-label="Седона на ютубе">Ютуб</a></li> <!-- иконка img/svg/youtube.svg -->
       </ul>
 
-      <!-- логотип академии img/svg/logo-htmlacademy.svg -->
-      <p class="page-footer__copyright">Website by <a class="page-footer__copylink" href="https://htmlacademy.ru/intensive/htmlcss"><img class="page-footer__copylogo" src="HTMLAcademy_logo/115x41" alt="Логотип HTML academy"></a></p>
+      <p class="page-footer__copyright">Website by
+        <a class="page-footer__copylink" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img class="page-footer__copylogo" src="../img/svg/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML academy">
+        </a>
+      </p>
     </footer>
   </body>
 </html>
