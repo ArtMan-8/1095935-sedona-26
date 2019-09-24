@@ -11,10 +11,6 @@ body {
   box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 
-a {
-  text-decoration: none;
-}
-
 .btn {
   cursor: pointer;
 }
@@ -29,6 +25,7 @@ a {
 }
 
 .page-header {
+  position: relative;
   font-weight: bold;
   line-height: 26px;
   background-color: #ffffff;
@@ -63,6 +60,11 @@ a {
   margin-left: auto;
 }
 
+.page-header__menu-link {
+  color: #000000;
+  text-decoration: none;
+}
+
 .page-header__menu-link:hover {
   color: #81b3d2;
 }
@@ -94,10 +96,6 @@ a {
   line-height: 26px;
 }
 
-.page-footer__social-list {
-  list-style: none;
-}
-
 .page-footer__social-item {
   display: inline-block;
 }
@@ -109,6 +107,8 @@ a {
   height: 48px;
   margin-right: 6px;
   background-color: #82b5d3;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .page-footer__social-link:hover {
@@ -122,31 +122,25 @@ a {
 
 .page-footer__social-link--tw {
   background-image: url("../img/svg/twitter.svg");
-  background-repeat: no-repeat;
   background-size: 17px 15px;
-  background-position: center;
 }
 
 .page-footer__social-link--fb {
   background-image: url("../img/svg/fb-icon.svg");
-  background-repeat: no-repeat;
   background-size: 12px 22px;
-  background-position: center;
 }
 
 .page-footer__social-link--youtube {
   background-image: url("../img/svg/youtube.svg");
-  background-repeat: no-repeat;
   background-size: 20px 16px;
-  background-position: center;
 }
 
-.page-footer__copyright {
+.page-footer__social-link__copyright {
   font-size: 14px;
   line-height: 26px;
 }
 
-.page-footer__copylogo {
+.page-footer__social-link__copylogo {
   vertical-align: middle;
 }
 
@@ -179,6 +173,10 @@ a {
 
 .features {
   margin-bottom: 57px;
+}
+
+.features__header {
+  text-align: center;
 }
 
 .features__text {
@@ -252,24 +250,20 @@ a {
   flex-direction: column;
   flex-basis: 400px;
   min-height: 330px;
+  background-repeat: no-repeat;
+  background-position: center bottom 198px;
 }
 
 .promo__item--house {
   background-image: url("../img/svg/icon-1.svg");
-  background-repeat: no-repeat;
-  background-position: center bottom 198px;
 }
 
 .promo__item--food {
   background-image: url("../img/svg/icon-3.svg");
-  background-repeat: no-repeat;
-  background-position: center bottom 198px;
 }
 
 .promo__item--gift {
   background-image: url("../img/svg/icon-2.svg");
-  background-repeat: no-repeat;
-  background-position: center bottom 198px;
 }
 
 .promo__header {
@@ -293,13 +287,6 @@ a {
   line-height: 24px;
   width: 435px;
   margin: auto;
-}
-
-.search-hotel__text--big {
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 36px;
-  margin-bottom: 12px;
 }
 
 .form-search-show {
