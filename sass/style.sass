@@ -27,18 +27,20 @@ body
   line-height: 26px
   background-color: #ffffff
 
-.page-header__nav
-
 .page-header__logo
   margin: auto
   position: absolute
   left: 0
   right: 0
 
+.page-header__nav
+  background-color: #ffffff
+
 .page-header__menu-list
   display: flex
   flex-wrap: wrap
-  list-style: none
+  margin: 0
+  padding: 0
 
 .page-header__menu-item
   display: flex
@@ -47,11 +49,8 @@ body
   align-items: center
   justify-content: center
 
-  &:nth-child(2)
-    margin-right: auto
-
-  &:nth-child(3)
-    margin-left: auto
+  &:nth-child(4n+2)
+    margin-right: 240px
 
 .page-header__menu-link
   color: #000000
@@ -126,45 +125,32 @@ body
     vertical-align: middle
 
 /* index.html style */
-.banner
-  height: 507px
-  background-image: url("../img/index-bg.jpg")
+.page-header
+  background-image: url("../img/svg/intro-mask.svg"), url("../img/svg/intro-welcome.svg"), url("../img/index-bg.jpg")
   background-repeat: no-repeat
-  background-position: top -80px center
-  margin-bottom: 60px
-
-.banner__intro
-  position: relative
-  height: 353px
-  width: 459px
-  background-image: url("../img/svg/intro-welcome.svg")
-  background-repeat: no-repeat
-  margin: 0 auto
-  top: 76px
-
-.banner__mask
-  position: relative
-  height: 59px
-  background-image: url("../img/svg/intro-mask.svg")
-  background-repeat: no-repeat
-  top: 97px
+  background-size: 1200px 59px, 459px 353px, 1200px 800px
+  background-position: center 506px, center 132px, center -28px
+  height: 563px
 
 .features
-  margin-bottom: 57px
+
+.features__title
+  padding-top: 61px
+  padding-bottom: 56px
+  width: 500px
+  margin: auto
 
 .features__header
+  margin: 0
+  margin-bottom: 28px
   text-align: center
+  font-size: 21px
+  line-height: 26px
 
 .features__text
   line-height: 26px
   text-align: center
-
-  &--big
-    width: 440px
-    font-weight: bold
-    font-size: 21px
-    margin: 0 auto
-    margin-bottom: 29px
+  margin: 0
 
 .features__list
   display: flex
