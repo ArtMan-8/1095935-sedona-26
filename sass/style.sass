@@ -1,4 +1,10 @@
 /* common style */
+html
+  box-sizing: border-box
+
+*, *::before, *::after
+  box-sizing: inherit
+
 body
   width: 1200px
   margin: 0 auto
@@ -12,6 +18,7 @@ body
 
 .btn
   cursor: pointer
+  border: none
 
 .visually-hidden
   position: absolute
@@ -25,7 +32,7 @@ body
   position: relative
   font-weight: bold
   line-height: 26px
-  background-color: #ffffff
+  background-color: #82b5d3
 
 .page-header__logo
   margin: auto
@@ -44,13 +51,13 @@ body
 
 .page-header__menu-item
   display: flex
-  flex-basis: 240px
+  width: 239px
   min-height: 56px
   align-items: center
   justify-content: center
 
   &:nth-child(4n+2)
-    margin-right: 240px
+    margin-right: 244px
 
 .page-header__menu-link
   color: #000000
@@ -69,28 +76,38 @@ body
   background-color: #ffffff
 
 .page-footer
+  margin-top: -120px
   display: flex
   min-height: 120px
   justify-content: space-around
   align-items: center
   background-color: #ffffff
   opacity: 0.9
+  padding: 36px 0
 
 .page-footer__social-hashtag
   font-weight: bold
   font-size: 21px
   line-height: 26px
+  text-align: center
+  margin: 0
+  width: 400px
 
 .page-footer__social-list
+  display: flex
+  list-style: none
+  justify-content: center
+  padding: 0
+  margin: 0
+  width: 400px
 
 .page-footer__social-item
-  display: inline-block
 
 .page-footer__social-link
   display: block
-  color: rgba(0, 0, 0, 0)
   width: 48px
   height: 48px
+  color: rgba(0, 0, 0, 0)
   margin-right: 6px
   background-color: #82b5d3
   background-repeat: no-repeat
@@ -115,17 +132,22 @@ body
     background-image: url("../img/svg/youtube.svg")
     background-size: 20px 16px
 
-  &__copyright
-    font-size: 14px
-    line-height: 26px
+.page-footer__copyright
+  font-size: 14px
+  line-height: 26px
+  margin: 0
+  text-align: center
+  width: 400px
 
-  &__copylink
+.page-footer__copylink
+  display: inline-block
+  vertical-align: middle
 
-  &__copylogo
-    vertical-align: middle
+.page-footer__copylogo
+  vertical-align: middle
 
 /* index.html style */
-.page-header
+.page-header--index
   background-image: url("../img/svg/intro-mask.svg"), url("../img/svg/intro-welcome.svg"), url("../img/index-bg.jpg")
   background-repeat: no-repeat
   background-size: 1200px 59px, 459px 353px, 1200px 800px
@@ -135,10 +157,10 @@ body
 .features
 
 .features__title
-  padding-top: 61px
+  padding-top: 60px
   padding-bottom: 56px
   width: 500px
-  margin: auto
+  margin: 0 auto
 
 .features__header
   margin: 0
@@ -155,29 +177,47 @@ body
 .features__list
   display: flex
   flex-wrap: wrap
-  list-style: none
+  flex-basis: 400px
+  margin: 0
+  padding: 0
 
 .features__item
   text-align: center
   display: flex
   flex-direction: column
   justify-content: space-between
-  padding-top: 46px
+  flex-wrap: wrap
+  min-height: 256px
   width: 400px
-  min-height: 143px
   background-color: #efefef
-  padding-top: 50px
-  padding-bottom: 63px
+
 
   &:nth-child(-n+2)
+    flex-direction: row
+    width: 1200px
     color: #ffffff
     background-color: #81b3d2
-    width: 1200px
+
+  &:nth-child(2)
+    flex-direction: row-reverse
+
+  &:nth-child(n+3)
+    padding: 50px 60px 63px
+
+.features__content
+  display: flex
+  flex-basis: 400px
+  flex-direction: column
+  justify-content: space-between
+  text-align: center
+  padding: 46px 46px 63px
+
+.features__foto
 
 .features__subheader
   font-weight: bold
   font-size: 21px
-  width: 160px
+  width: 150px
   margin: 0 auto
 
 .features__number
@@ -189,17 +229,16 @@ body
     content: " \2012"
 
 .features__description
-    width: 270px
-    margin: 0 auto
-
-.features__foto
+  margin: 0 auto
 
 .promo
-  list-style: none
+  width: 100%
   display: flex
   flex-wrap: wrap
   color: #000000
   background-color: #ffffff
+  margin: 0
+  padding: 0
 
 .promo__item
   display: flex
@@ -219,8 +258,9 @@ body
     background-image: url("../img/svg/icon-2.svg")
 
 .promo__header
-  padding-top: 164px
+  padding-top: 161px
   padding-bottom: 26px
+  margin: 0
   font-weight: bold
   font-size: 21px
 
@@ -229,29 +269,32 @@ body
   margin: 0 auto
 
 .search-hotel
+  position: relative
+  padding-top: 57px
   background-color: #ffffff
   text-align: center
 
 .search-hotel__header
+  margin: 0 auto
+  font-size: 30px
+  margin-bottom: 30px
 
 .search-hotel__text
   line-height: 24px
   width: 435px
-  margin: auto
+  margin: 0 auto
+  margin-bottom: 50px
 
 .search-hotel__map
 
 .form-search-show
-  width: 568px
-  height: 56px
+  padding: 30px 140px
   font-weight: bold
   font-size: 21px
   line-height: 26px
   color: #ffffff
   text-transform: uppercase
   background-color: #766357
-  border: none
-  margin-top: 52px
 
   &:hover
     background-color: #604d41
@@ -261,19 +304,26 @@ body
     background-color: #4f3c30
 
 .form-search
-  box-sizing: border-box
+  position: absolute
+  left: 0
+  right: 0
+  display: flex
+  flex-direction: column
   font-weight: bold
   line-height: 26px
   width: 568px
   margin: 0 auto
   padding: 55px
+  background-color: #ffffff
   box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15)
 
 .form-search__row
+  display: flex
+  justify-content: space-between
+  align-items: center
   margin-bottom: 30px
 
 .form-search__text
-  box-sizing: border-box
   background-color: #f2f2f2
   border: none
   width: 346px
@@ -282,6 +332,7 @@ body
   font-weight: bold
   line-height: 26px
   padding-left: 12px
+  text-transform: uppercase
 
   &:hover
     background-color: #ececec
@@ -291,7 +342,6 @@ body
     border: solid 2px #e5e5e5
 
 .form-search__number
-  box-sizing: border-box
   font-size: 14px
   font-weight: bold
   line-height: 26px
@@ -318,6 +368,7 @@ body
   text-transform: uppercase
   background-color: #81b3d2
   border: none
+  margin-top: 24px
   padding: 0
 
   &:hover
@@ -329,6 +380,13 @@ body
 
 
 /* catalog.html style*/
+.page-header--index
+  background-image: url("../img/svg/intro-mask.svg"), url("../img/svg/intro-welcome.svg"), url("../img/index-bg.jpg")
+  background-repeat: no-repeat
+  background-size: 1200px 59px, 459px 353px, 1200px 800px
+  background-position: center 506px, center 132px, center -28px
+  height: 563px
+
 .form-filter
   display: flex
   color: #ffffff
@@ -392,7 +450,6 @@ body
 .sorted-hotel__list
   display: flex
   align-items: center
-  list-style: none
 
 .sorted-hotel__item
 
@@ -431,7 +488,6 @@ body
     background-image: url("../img/svg/icon-down-dir.svg")
 
 .sorted-hotel__article
-  box-sizing: border-box
   border-top: 1px solid #e6e6e6
   border-bottom: 1px solid #e6e6e6
   padding: 31px 72px
