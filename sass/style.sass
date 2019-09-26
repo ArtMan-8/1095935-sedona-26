@@ -102,42 +102,58 @@ body
 
 .page-footer__social-list
   display: flex
+  flex-wrap: wrap
   list-style: none
   justify-content: center
   padding: 0
-  margin: 0
+  margin: 0 auto
   width: 400px
 
 .page-footer__social-item
 
 .page-footer__social-link
+  position: relative
   display: block
-  width: 48px
+  font-size: 0
+  color: #ffffff
+  width: 46px
   height: 48px
-  color: rgba(0, 0, 0, 0)
   margin-right: 6px
-  background-color: #82b5d3
+  background-color: #81b3d2
   background-repeat: no-repeat
   background-position: center
 
-  &:hover
-    background-color: #669fc1
+  &::before
+    position: absolute
+    display: block
+    content: ""
+    width: 46px
+    height: 48px
+    left: 0
+    background-position: center
+    background-repeat: no-repeat
 
-  &:active
-    background-color: #5397be
-    fill: #89b7d2
-
-  &--tw
+  &--tw::before
     background-image: url("../img/svg/twitter.svg")
     background-size: 17px 15px
 
-  &--fb
+  &--fb::before
     background-image: url("../img/svg/fb-icon.svg")
     background-size: 12px 22px
 
-  &--youtube
+  &--youtube::before
     background-image: url("../img/svg/youtube.svg")
     background-size: 20px 16px
+
+  &:hover::before
+    background-color: #669fc0
+
+  &:active
+    background-color: #5496bd
+
+  &:active::before
+    opacity: 0.3
+
 
 .page-footer__copyright
   font-size: 14px
@@ -147,11 +163,18 @@ body
   width: 400px
 
 .page-footer__copylink
-  display: inline-block
   vertical-align: middle
 
 .page-footer__copylogo
   vertical-align: middle
+  margin-left: 5px
+  fill: #231f20
+
+  &:hover
+    fill: #81b3d2
+
+  &:active
+    fill: #bdbbbc
 
 /* index.html style */
 .page-header--index
@@ -194,7 +217,7 @@ body
   justify-content: space-between
   flex-wrap: wrap
   width: 400px
-  background-color: #efefef
+  background-color: #ffffff
 
   &--foto-right
     flex-direction: row
@@ -287,6 +310,7 @@ body
 .more
   padding: 46px 60px 63px
   min-height: 256px
+  background-color: #efefef
 
 .search-hotel
   position: relative
@@ -302,14 +326,15 @@ body
 
 .search-hotel__text
   line-height: 24px
-  width: 435px
+  width: 450px
   margin: 0 auto
   margin-bottom: 48px
 
 .search-hotel__map
 
 .form-search-show
-  padding: 30px 140px
+  padding: 30px
+  width: 568px
   font-weight: bold
   font-size: 21px
   line-height: 26px
@@ -339,10 +364,24 @@ body
   box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15)
 
 .form-search__row
+  position: relative
   display: flex
   justify-content: space-between
   align-items: center
   margin-bottom: 30px
+
+.form-search__age
+  width: 50%
+  display: flex
+  justify-content: flex-start
+  align-items: center
+
+.form-search__label
+  display: inline-block
+  margin-right: auto
+
+  &--children
+    margin-left: 53px
 
 .form-search__text
   background-color: #f2f2f2
@@ -362,6 +401,27 @@ body
     background-color: #ffffff
     border: solid 2px #e5e5e5
 
+.form-search__calendar
+  position: absolute
+  display: block
+  right: 15px
+  height: 22px
+  width: 21px
+  top: 50%
+  transform: translateY(-50%)
+  cursor: pointer
+  background-color: transparent
+  border: none
+
+.calendar
+  fill: #a9a9a9
+
+.calendar:hover
+  fill: #000000
+
+.calendar:active
+  fill: #81b3d2
+
 .form-search__number
   font-size: 14px
   font-weight: bold
@@ -379,12 +439,50 @@ body
     background-color: #ffffff
     border: solid 2px #e5e5e5
 
+.btn--control
+  position: relative
+  width: 38px
+  height: 38px
+  background-color: #f2f2f2
+
+  &::before
+    position: absolute
+    content: ""
+    top: 18px
+    left: 13px
+    width: 12px
+    height: 3px
+    background-color: #aaabaa
+
+  &:hover::before
+    background-color: #000000
+
+  &:active::before
+    background-color: #82b5d3
+
+.btn--plus
+
+  &::after
+    position: absolute
+    content: ""
+    top: 13px
+    left: 18px
+    width: 3px
+    height: 12px
+    background-color: #aaabaa
+
+  &:hover::after
+    background-color: #000000
+
+  &:active::after
+    background-color: #82b5d3
+
 .form-search__submit
   font-weight: bold
   font-size: 21px
   line-height: 26px
   width: 458px
-  height: 58px
+  min-height: 58px
   color: #ffffff
   text-transform: uppercase
   background-color: #81b3d2
@@ -500,11 +598,11 @@ body
   flex-direction: column
 
 .sorted-hotel__found
-  font-size: 12px
   display: flex
   align-items: center
   margin: 0
-  padding: 20px 72px
+  padding: 16px 72px 20px
+  border-bottom: 1px solid #e6e6e6
 
 .sorted-hotel__quantity
   font-weight: bold
@@ -512,13 +610,14 @@ body
   line-height: 26px
   height: 22px
   margin: 0
-  margin-right: 49px
+  margin-right: 46px
 
 .sorted-hotel__sorting
+  font-size: 12px
+  line-height: 18px
 
 .sorted-hotel__list
   display: flex
-  align-items: center
   list-style: none
 
 .sorted-hotel__item
@@ -527,6 +626,8 @@ body
     margin: 0 33px
 
 .sorted-hotel__type-sort
+  font-size: 12px
+  line-height: 18px
   color: rgba(0, 0, 0, 0.3)
   text-decoration: underline dotted #81b3d2
 
@@ -559,9 +660,8 @@ body
     background-image: url("../img/svg/icon-down-dir.svg")
 
 .sorted-hotel__article
-  border-top: 1px solid #e6e6e6
   border-bottom: 1px solid #e6e6e6
-  padding: 30px 72px
+  padding: 28px 72px 35px
   display: flex
 
 .sorted-hotel__content
@@ -576,7 +676,6 @@ body
 .sorted-hotel__header
   font-weight: bold
   font-size: 21px
-  line-height: 26px
   margin: 0
 
 .sorted-hotel__link
@@ -592,14 +691,12 @@ body
 
 .sorted-hotel__option
   margin: 0
-  margin-bottom: 18px
+  margin-bottom: 20px
 
 .sorted-hotel__btn
-  display: block
-  height: 27px
   font-weight: bold
   color: #ffffff
-  padding: 4px 16px
+  padding: 4px 17px
   margin: 0
   text-decoration: none
 
