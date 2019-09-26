@@ -27,64 +27,65 @@
       <h1 class="visually-hidden">Гостиницы городка Седона</h1>
 
       <section class="filter-hotel">
-        <h2 class="visually-hidden" tabindex="0"  >Подбор гостиниц по критериям</h2>
+        <h2 class="visually-hidden" tabindex="0">Подбор гостиниц по критериям</h2>
 
-        <form class="form-filter" action="https://echo.htmlacademy.ru/" method="GET" tabindex="0" aria-label="фильтр гостиниц">
+        <form class="form-filter" action="https://echo.htmlacademy.ru/" method="GET">
           <fieldset class="form-filter__set">
             <legend class="form-filter__legend" tabindex="0">Инфраструктура:</legend>
-            <p class="form-filter__row">
-              <input class="form-filter__check" type="checkbox" name="filter-pool" id="filter-pool" checked>
-              <label class="form-filter__label" for="filter-pool">Бассейн</label>
-            </p>
-            <p class="form-filter__row">
-              <input class="form-filter__check" type="checkbox" name="filter-parking" id="filter-parking">
-              <label class="form-filter__label" for="filter-parking">Парковка</label>
-            </p>
-            <p class="form-filter__row">
-              <input class="form-filter__check" type="checkbox" name="filter-wifi" id="filter-wifi">
-              <label class="form-filter__label" for="filter-wifi">WI-FI</label>
-            </p>
+            <ul class="form-filter__list">
+              <li class="form-filter__row">
+                <input class="form-filter__check visually-hidden" type="checkbox" name="filter-pool" id="filter-pool" checked>
+                <label class="form-filter__label" for="filter-pool">Бассейн</label>
+              </li>
+              <li class="form-filter__row">
+                <input class="form-filter__check visually-hidden" type="checkbox" name="filter-parking" id="filter-parking">
+                <label class="form-filter__label" for="filter-parking">Парковка</label>
+              </li>
+              <p class="form-filter__row">
+                <input class="form-filter__check visually-hidden" type="checkbox" name="filter-wifi" id="filter-wifi">
+                <label class="form-filter__label" for="filter-wifi">WI-FI</label>
+              </li>
+            </ul>
           </fieldset>
 
           <fieldset class="form-filter__set">
             <legend class="form-filter__legend" tabindex="0">Тип жилья:</legend>
-            <p class="form-filter__row">
-              <input class="form-filter__check" type="checkbox" name="filter-hotel" id="filter-hotel" checked>
-              <label class="form-filter__label" for="filter-hotel">Гостиница</label>
-            </p>
-            <p class="form-filter__row">
-              <input class="form-filter__check" type="checkbox" name="filter-motel" id="filter-motel" checked>
-              <label class="form-filter__label" for="filter-motel">Мотель</label>
-            </p>
-            <p class="form-filter__row">
-              <input class="form-filter__check" type="checkbox" name="filter-apartment" id="filter-apartment" checked>
-              <label class="form-filter__label" for="filter-apartment">Апартаменты</label>
-            </p>
+            <ul class="form-filter__list">
+              <li class="form-filter__row">
+                <input class="form-filter__check visually-hidden" type="checkbox" name="filter-hotel" id="filter-hotel" checked>
+                <label class="form-filter__label" for="filter-hotel">Гостиница</label>
+              </li>
+              <li class="form-filter__row">
+                <input class="form-filter__check visually-hidden" type="checkbox" name="filter-motel" id="filter-motel" checked>
+                <label class="form-filter__label" for="filter-motel">Мотель</label>
+              </li>
+              <li class="form-filter__row">
+                <input class="form-filter__check visually-hidden" type="checkbox" name="filter-apartment" id="filter-apartment" checked>
+                <label class="form-filter__label" for="filter-apartment">Апартаменты</label>
+              </li>
+            </ul>
           </fieldset>
 
-          <fieldset class="form-filter__set">
-            <legend class="form-filter__legend" tabindex="0">Стоимость в сутки (Р):</legend>
+          <div class="container__flex-column">
+            <fieldset class="form-filter__set form-filter__set--renge">
+              <legend class="form-filter__legend" tabindex="0">Стоимость в сутки (Р):</legend>
 
-            <div class="form-filter__price-value">
-              <label class="form-filter__price form-filter__price--min">от
-                <input class="form-filter__text" type="number" name="price-min" value="0">
-              </label>
-              <label class="form-filter__price form-filter__price--max">до
-                <input class="form-filter__text" type="number" name="price-max" value="3000">
-              </label>
-            </div>
-
-            <div class="form-filter__price-range">
-              <div class="form-filter__scale">
-                <div class="form-filter__bar"></div>
+              <!-- кастомный ползунок с цифрами -->
+              <div class="price-controls">
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
               </div>
-              <div class="form-filter__toggle form-filter__toggle--min"></div>
-              <div class="form-filter__toggle form-filter__toggle--max"></div>
-            </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
+            </fieldset>
 
             <button class="form-filter__submit btn" type="submit">Показать</button>
-          </fieldset>
-
+          </div>
         </form>
       </section>
 
@@ -100,58 +101,76 @@
             <li class="sorted-hotel__item"><a class="sorted-hotel__type-sort" href="" aria-label="сортировка по рейтингу">по рейтингу</a></li>
           </ul>
           <p class="sorted-hotel__direction">
-            <a class="sorted-hotel__arrow sorted-hotel__arrow--up sorted-hotel__arrow--active" aria-label="сортировка по возрастанию" href=""></a> <!-- стрелочка вверх img/svg/icon-up-dir.svg -->
-            <a class="sorted-hotel__arrow sorted-hotel__arrow--down" aria-label="сортировка по убыванию" href=""></a> <!-- стрелочка вниз img/svg/icon-down-dir.svg -->
+            <a class="sorted-hotel__arrow sorted-hotel__arrow--up sorted-hotel__arrow--active" href="">сортировка по возрастанию</a> <!-- стрелочка вверх img/svg/icon-up-dir.svg -->
+            <a class="sorted-hotel__arrow sorted-hotel__arrow--down" href="">сортировка по убыванию</a> <!-- стрелочка вниз img/svg/icon-down-dir.svg -->
           </p>
         </div>
 
         <article class="sorted-hotel__article">
-          <h3 class="sorted-hotel__header"><a class="sorted-hotel__link" href="">Amara Resort & Spa</a></h3>
+          <div class="sorted-hotel__content">
+            <h3 class="sorted-hotel__header"><a class="sorted-hotel__link" href="">Amara Resort & Spa</a></h3>
+            <div class="container__flex-row">
+              <div class="sorted-hotel__description" tabindex="0" aria-label="Гостиница от 4000 рублей">
+                <p class="sorted-hotel__option sorted-hotel__option--type">Гостиница</p>
+                <a class="sorted-hotel__btn sorted-hotel__btn--details" href="">Подробнее</a>
+              </div>
+              <div class="sorted-hotel__booking">
+                <p class="sorted-hotel__option sorted-hotel__option--price">от 4000 Р.</p>
+                <a class="sorted-hotel__btn sorted-hotel__btn--book" href="">Забронировать</a>
+              </div>
+            </div>
+          </div>
+
           <img class="sorted-hotel__foto" src="img/hotel-1.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & Spa">
-          <p class="sorted-hotel__description" tabindex="0" aria-label="Гостиница от 4000 рублей">
-            <span class="sorted-hotel__option sorted-hotel__option--type">Гостиница</span>
-            <span class="sorted-hotel__option sorted-hotel__option--price">от 4000 Р.</span>
-          </p>
-          <p class="sorted-hotel__control">
-            <a class="sorted-hotel__btn sorted-hotel__btn--details" href="">Подробнее</a>
-            <a class="sorted-hotel__btn sorted-hotel__btn--book" href="">Забронировать</a>
-          </p>
+
           <div class="sorted-hotel__rating">
-            <span class="sorted-hotel__star sorted-hotel__star--five">5 звёзд</span> <!-- звёздочки рейтинга img/svg/star.svg -->
+            <span class="sorted-hotel__star sorted-hotel__star--four">4 звёзды</span> <!-- звёздочки рейтинга img/svg/star.svg -->
             <p class="sorted-hotel__text">Рейтинг: 8,5</p>
           </div>
         </article>
 
         <article class="sorted-hotel__article">
-          <h3 class="sorted-hotel__header"><a class="sorted-hotel__link" href="">Desert Quail Inn</a></h3>
-          <img class="sorted-hotel__foto" src="img/hotel-2.jpg" width="135" height="90" alt="Фото гостиницы Desert Quail Inn">
-          <p class="sorted-hotel__description" tabindex="0" aria-label="Мотель от 3000 рублей">
-            <span class="sorted-hotel__option sorted-hotel__option--type">Мотель</span>
-            <span class="sorted-hotel__option sorted-hotel__option--price">от 3000 Р.</span>
-          </p>
-          <p class="sorted-hotel__control">
-            <a class="sorted-hotel__btn sorted-hotel__btn--details" href="">Подробнее</a>
-            <a class="sorted-hotel__btn sorted-hotel__btn--book" href="">Забронировать</a>
-          </p>
+          <div class="sorted-hotel__content">
+            <h3 class="sorted-hotel__header"><a class="sorted-hotel__link" href="">Desert Quail Inn</a></h3>
+            <div class="container__flex-row">
+              <div class="sorted-hotel__description" tabindex="0" aria-label="Гостиница от 4000 рублей">
+                <p class="sorted-hotel__option sorted-hotel__option--type">Мотель</p>
+                <a class="sorted-hotel__btn sorted-hotel__btn--details" href="">Подробнее</a>
+              </div>
+              <div class="sorted-hotel__booking">
+                <p class="sorted-hotel__option sorted-hotel__option--price">от 3000 Р.</p>
+                <a class="sorted-hotel__btn sorted-hotel__btn--book" href="">Забронировать</a>
+              </div>
+            </div>
+          </div>
+
+          <img class="sorted-hotel__foto" src="img/hotel-1.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & Spa">
+
           <div class="sorted-hotel__rating">
-            <span class="sorted-hotel__star sorted-hotel__star--three">3 звезды</span> <!-- звёздочки рейтинга img/svg/star.svg -->
+            <span class="sorted-hotel__star sorted-hotel__star--three">3 звёзды</span> <!-- звёздочки рейтинга img/svg/star.svg -->
             <p class="sorted-hotel__text">Рейтинг: 8,9</p>
           </div>
         </article>
 
         <article class="sorted-hotel__article">
-          <h3 class="sorted-hotel__header"><a class="sorted-hotel__link" href="">Villas at Poco Diablo</a></h3>
-          <img class="sorted-hotel__foto" src="img/hotel-2.jpg" width="135" height="90" alt="Фото гостиницы Villas at Poco Diablo">
-          <p class="sorted-hotel__description" tabindex="0" aria-label="Апартаменты от 2000 рублей">
-            <span class="sorted-hotel__option sorted-hotel__option--type">Апартаменты</span>
-            <span class="sorted-hotel__option sorted-hotel__option--price">от 2000 Р.</span>
-          </p>
-          <p class="sorted-hotel__control">
-            <a class="sorted-hotel__btn sorted-hotel__btn--details" href="">Подробнее</a>
-            <a class="sorted-hotel__btn sorted-hotel__btn--book" href="">Забронировать</a>
-          </p>
+          <div class="sorted-hotel__content">
+            <h3 class="sorted-hotel__header"><a class="sorted-hotel__link" href="">Villas at Poco Diablo</a></h3>
+            <div class="container__flex-row">
+              <div class="sorted-hotel__description" tabindex="0" aria-label="Гостиница от 4000 рублей">
+                <p class="sorted-hotel__option sorted-hotel__option--type">Апартаменты</p>
+                <a class="sorted-hotel__btn sorted-hotel__btn--details" href="">Подробнее</a>
+              </div>
+              <div class="sorted-hotel__booking">
+                <p class="sorted-hotel__option sorted-hotel__option--price">от 2000 Р.</p>
+                <a class="sorted-hotel__btn sorted-hotel__btn--book" href="">Забронировать</a>
+              </div>
+            </div>
+          </div>
+
+          <img class="sorted-hotel__foto" src="img/hotel-1.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & Spa">
+
           <div class="sorted-hotel__rating">
-            <span class="sorted-hotel__star sorted-hotel__star--two">2 звезды</span> <!-- звёздочки рейтинга img/svg/star.svg -->
+            <span class="sorted-hotel__star sorted-hotel__star--two">2 звёзды</span> <!-- звёздочки рейтинга img/svg/star.svg -->
             <p class="sorted-hotel__text">Рейтинг: 9,2</p>
           </div>
         </article>

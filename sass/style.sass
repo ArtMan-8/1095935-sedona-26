@@ -28,6 +28,14 @@ body
   overflow: hidden
   clip: rect(0 0 0 0)
 
+.container__flex-column
+  display: flex
+  flex-direction: column
+
+.container__flex-row
+  display: flex
+  flex-direction: row
+
 .page-header
   position: relative
   font-weight: bold
@@ -76,7 +84,6 @@ body
   background-color: #ffffff
 
 .page-footer
-  margin-top: -120px
   display: flex
   min-height: 120px
   justify-content: space-around
@@ -223,10 +230,12 @@ body
 .features__number
 
   &::before
-    content: "\2012 "
+    content: "\2012"
+    margin-right: 5px
 
   &::after
-    content: " \2012"
+    content: "\2012"
+    margin-left: 5px
 
 .features__description
   margin: 0 auto
@@ -273,6 +282,7 @@ body
   padding-top: 57px
   background-color: #ffffff
   text-align: center
+  margin-bottom: -120px
 
 .search-hotel__header
   margin: 0 auto
@@ -387,44 +397,91 @@ body
   background-position: center 506px, center 132px, center -28px
   height: 563px
 
-.form-filter
-  display: flex
+.filter-hotel
+  min-height: 217px
   color: #ffffff
   background-color: #81b3d2
   background-image: url("../img/catalog-bg.jpg")
   background-repeat: no-repeat
   background-position: center
-  padding: 31px 72px
+  padding: 28px 72px
+
+.form-filter
+  display: flex
+
 
 .form-filter__set
   display: flex
   flex-direction: column
   border: none
+  min-width: 200px
+  margin: 0
+  padding: 0
 
-  &:nth-child(3)
-    margin-left: auto
-    width: 320px
+  &--renge
+    width: 315px
+
+  &:nth-child(2)
+    margin-left: 55px
+    margin-right: auto
 
 .form-filter__legend
   font-weight: bold
   font-size: 16px
 
+.form-filter__list
+  display: flex
+  flex-direction: column
+  list-style: none
+  margin: 0
+  margin-top: 24px
+
 .form-filter__row
   font-size: 14px
   line-height: 21px
+  margin: 0
+  padding-bottom: 25px
+
+  &:nth-last-child(1)
+    padding: 0
 
 .form-filter__check
   font-size: 14px
   line-height: 21px
 
-.form-filter__text
+.form-filter__label
+  position: relative
   font-size: 14px
   line-height: 21px
 
+  &::before
+    content: ""
+    position: absolute
+    left: -40px
+    display: block
+    width: 23px
+    height: 23px
+    background-image: url(../img/svg/checkbox-off.svg)
+
+.form-filter__check:checked + .form-filter__label::before
+  width: 27px
+  background-image: url(../img/svg/checkbox-on.svg)
+
 .form-filter__submit
-  line-height: 21px
   text-transform: uppercase
-  border: none
+  display: block
+  margin: 0 auto
+  padding: 6px 35px
+  font-size: 14px
+  line-height: 21px
+  color: #ffffff
+  text-transform: uppercase
+  background: transparent
+  border: 2px solid #ffffff
+  border-radius: 2px
+
+/* кастомный ползунок с цифрами */
+@import "filter-range"
 
 .sorted-hotel
   color: #000000
@@ -433,23 +490,25 @@ body
 
 .sorted-hotel__found
   font-size: 12px
-  line-height: 18px
   display: flex
-  align-items: flex-end
-  margin: 31px 72px
+  align-items: center
+  margin: 0
+  padding: 20px 72px
 
 .sorted-hotel__quantity
   font-weight: bold
   font-size: 21px
   line-height: 26px
+  height: 22px
+  margin: 0
   margin-right: 49px
 
 .sorted-hotel__sorting
-  margin-right: 40px
 
 .sorted-hotel__list
   display: flex
   align-items: center
+  list-style: none
 
 .sorted-hotel__item
 
@@ -477,6 +536,7 @@ body
 
 .sorted-hotel__arrow
   display: inline-block
+  font-size: 0
   width: 10px
   height: 10px
 
@@ -490,23 +550,47 @@ body
 .sorted-hotel__article
   border-top: 1px solid #e6e6e6
   border-bottom: 1px solid #e6e6e6
-  padding: 31px 72px
+  padding: 30px 72px
+  display: flex
+
+.sorted-hotel__content
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.sorted-hotel__foto
+  order: -1
+  margin-right: 30px
 
 .sorted-hotel__header
   font-weight: bold
   font-size: 21px
   line-height: 26px
+  margin: 0
 
 .sorted-hotel__link
   color: #000000
+  text-decoration: none
 
-.sorted-hotel__control
+.sorted-hotel__description
+  margin: 0
+  margin-right: 6px
+
+.sorted-hotel__booking
+  margin: 0
+
+.sorted-hotel__option
+  margin: 0
+  margin-bottom: 18px
 
 .sorted-hotel__btn
-  display: inline-block
+  display: block
+  height: 27px
   font-weight: bold
   color: #ffffff
-  padding: 8px 16px
+  padding: 4px 16px
+  margin: 0
+  text-decoration: none
 
   &--details
     background-color: #81b3d2
@@ -528,16 +612,35 @@ body
       color: rgba(255, 255, 255, 0.3)
       background-color: #503e33
 
-.sorted-hotel__star
-  display: inline-block
-  height: 18px
-  width: 18px
-  background-image: url("../img/svg/star.svg")
+.sorted-hotel__rating
+  margin-left: auto
+  display: flex
+  flex-direction: column
+  justify-content: space-between
 
-  &--five
+.sorted-hotel__star
+  display: block
+  font-size: 0
+  display: inline-block
+  height: 20px
+  width: 20px
+  background-image: url("../img/svg/star.svg")
+  background-repeat: space no-repeat
+  margin: 0
+  margin-left: auto
+
+  &--two
+    width: 41px
+
+  &--three
+    width: 65px
+
+  &--four
+    width: 89px
 
 .sorted-hotel__text
   display: inline-block
   color: #666666
   background-color: #f2f2f2
   padding: 5px 15px
+  margin: 0
