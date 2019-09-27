@@ -840,15 +840,23 @@ body {
   font-size: 0;
   width: 10px;
   height: 10px;
+  fill: #cacaca;
 }
 
-.sorted-hotel__arrow--up {
-  background-image: url("../img/svg/icon-up-dir.svg");
+.sorted-hotel__arrow:hover {
+  fill: #000000;
+}
+
+.sorted-hotel__arrow:active {
+  fill: #81b3d2;
+}
+
+.sorted-hotel__arrow--active {
+  fill: #81b3d2;
 }
 
 .sorted-hotel__arrow--down {
   margin-left: 12px;
-  background-image: url("../img/svg/icon-down-dir.svg");
 }
 
 .sorted-hotel__article {
