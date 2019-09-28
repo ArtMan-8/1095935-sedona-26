@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* common style */
 html {
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
@@ -662,12 +663,21 @@ body {
   display: block;
   width: 23px;
   height: 23px;
-  background-image: url(../img/svg/checkbox-off.svg);
+  background-image: url("../img/svg/checkbox-off.svg");
+  background-repeat: no-repeat;
 }
 
 .form-filter__check:checked + .form-filter__label::before {
   width: 27px;
-  background-image: url(../img/svg/checkbox-on.svg);
+  background-image: url("../img/svg/checkbox-on.svg");
+}
+
+.form-filter__check:disabled + .form-filter__label::before {
+  background-image: url("../img/svg/checkbox-off-dis.svg");
+}
+
+.form-filter__check:checked:disabled + .form-filter__label::before {
+  background-image: url("../img/svg/checkbox-on-dis.svg");
 }
 
 /* кастомный ползунок с цифрами */
@@ -738,7 +748,7 @@ body {
   width: 4px;
   height: 4px;
   background: #ababab;
-  background-image: url(../img/svg/filter-button.svg);
+  background-image: url("../img/svg/filter-button.svg");
   border: 9px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);

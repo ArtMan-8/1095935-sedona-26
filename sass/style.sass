@@ -1,5 +1,6 @@
 /* common style */
 html
+  padding: 0 20px
   box-sizing: border-box
 
 *, *::before, *::after
@@ -573,11 +574,19 @@ body
     display: block
     width: 23px
     height: 23px
-    background-image: url(../img/svg/checkbox-off.svg)
+    background-image: url("../img/svg/checkbox-off.svg")
+    background-repeat: no-repeat
+
 
 .form-filter__check:checked + .form-filter__label::before
   width: 27px
-  background-image: url(../img/svg/checkbox-on.svg)
+  background-image: url("../img/svg/checkbox-on.svg")
+
+.form-filter__check:disabled + .form-filter__label::before
+  background-image: url("../img/svg/checkbox-off-dis.svg")
+
+.form-filter__check:checked:disabled + .form-filter__label::before
+  background-image: url("../img/svg/checkbox-on-dis.svg")
 
 /* кастомный ползунок с цифрами */
 @import "filter-range"
