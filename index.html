@@ -11,13 +11,13 @@
   <body>
     <header class="page-header page-header--index">
       <a class="page-header__logo-link" href="index.html">
-        <img class="page-header__logo" src="img/svg/logo-sedona.svg" width="140" height="71" alt="Логотип Седона"> <!-- логотип Седона img/svg/logo-sedona.svg -->
+        <img class="page-header__logo" src="img/svg/logo-sedona.svg" width="140" height="71" alt="Логотип Седона">
       </a>
       <nav class="page-header__nav">
         <ul class="page-header__menu-list">
-          <li class="page-header__menu-item"><a class="page-header__menu-link" href="">Информация</a></li>
-          <li class="page-header__menu-item"><a class="page-header__menu-link" href="">Фото и видео</a></li>
-          <li class="page-header__menu-item"><a class="page-header__menu-link" href="">Карта штата</a></li>
+          <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">Информация</a></li>
+          <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">Фото и видео</a></li>
+          <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">Карта штата</a></li>
           <li class="page-header__menu-item"><a class="page-header__menu-link" href="catalog.html">Гостиницы</a></li>
         </ul>
       </nav>
@@ -98,27 +98,18 @@
         <h2 class="search-hotel__header">Заинтересовались?</h2>
         <p class="search-hotel__text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 
-        <!-- в форме используется изображение календаря img/svg/calendar.svg -->
         <button class="form-search-show btn" type="button">Поиск гостиницы в Седоне</button>
         <form class="form-search" action="https://echo.htmlacademy.ru/" method="GET" aria-label="Поиск готиницы в Седоне">
           <div class="form-search__row">
             <label class="form-search__label" for="date-arrival">Дата заезда:</label>
             <input class="form-search__text" id="date-arrival" type="text" placeholder="24 апреля 2017">
-            <button class="form-search__calendar" type="button">
-              <svg class="calendar" xmlns="http://www.w3.org/2000/svg" width="21" height="22">
-                <path d="M19.3 2h-2.9V.6c0-.3-.3-.6-.6-.6-.4 0-.7.3-.7.6V2h-4V.6c0-.3-.2-.6-.6-.6-.4 0-.7.3-.7.6V2H6V.6c0-.3-.3-.6-.7-.6-.3 0-.6.3-.6.6V2H1.8C.8 2 0 2.8 0 4v16.3c0 1 .8 1.8 1.8 1.8h17.5c1 0 1.7-.8 1.7-1.8V3.9c0-1-.8-1.9-1.7-1.9zm.4 18.2a.4.4 0 0 1-.4.4H1.7a.5.5 0 0 1-.4-.4V3.9a.5.5 0 0 1 .5-.5h2.8v1.4c0 .4.3.7.7.7.3 0 .6-.3.6-.7V3.4h4v1.4c0 .4.2.7.6.7.4 0 .7-.3.7-.7V3.4H15v1.4c0 .4.3.7.7.7.3 0 .6-.3.6-.7V3.4h2.9c.2 0 .4.2.4.5v16.3z"/><path d="M4.6 8.2h2.6v2H4.6zm0 3.5h2.6v2H4.6zm0 3.4h2.6v2H4.6zm4.6 0h2.6v2H9.2zm0-3.4h2.6v2H9.2zm0-3.5h2.6v2H9.2zm4.6 7h2.6v2h-2.6zm0-3.5h2.6v2h-2.6zm0-3.5h2.6v2h-2.6z"/>
-              </svg>
-            </button>
+            <button class="form-search__calendar" type="button"></button>
           </div>
 
           <div class="form-search__row">
             <label class="form-search__label" for="date-leave">Дата выезда:</label>
             <input class="form-search__text" id="date-leave" type="text" placeholder="4 июля 2017">
-            <button class="form-search__calendar" type="button">
-              <svg class="calendar" xmlns="http://www.w3.org/2000/svg" width="21" height="22">
-                <path d="M19.3 2h-2.9V.6c0-.3-.3-.6-.6-.6-.4 0-.7.3-.7.6V2h-4V.6c0-.3-.2-.6-.6-.6-.4 0-.7.3-.7.6V2H6V.6c0-.3-.3-.6-.7-.6-.3 0-.6.3-.6.6V2H1.8C.8 2 0 2.8 0 4v16.3c0 1 .8 1.8 1.8 1.8h17.5c1 0 1.7-.8 1.7-1.8V3.9c0-1-.8-1.9-1.7-1.9zm.4 18.2a.4.4 0 0 1-.4.4H1.7a.5.5 0 0 1-.4-.4V3.9a.5.5 0 0 1 .5-.5h2.8v1.4c0 .4.3.7.7.7.3 0 .6-.3.6-.7V3.4h4v1.4c0 .4.2.7.6.7.4 0 .7-.3.7-.7V3.4H15v1.4c0 .4.3.7.7.7.3 0 .6-.3.6-.7V3.4h2.9c.2 0 .4.2.4.5v16.3z"/><path d="M4.6 8.2h2.6v2H4.6zm0 3.5h2.6v2H4.6zm0 3.4h2.6v2H4.6zm4.6 0h2.6v2H9.2zm0-3.4h2.6v2H9.2zm0-3.5h2.6v2H9.2zm4.6 7h2.6v2h-2.6zm0-3.5h2.6v2h-2.6zm0-3.5h2.6v2h-2.6z"/>
-              </svg>
-            </button>
+            <button class="form-search__calendar" type="button"></button>
           </div>
 
           <div class="form-search__row">
@@ -155,9 +146,9 @@
       <p class="page-footer__social-hashtag">#visitSEDONA</p>
 
       <ul class="page-footer__social-list">
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--tw" href="" aria-label="Седона в твитере">Твитер</a></li> <!-- иконка img/svg/twitter.svg -->
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--fb" href="" aria-label="Седона на фейсбуке">Фэйсбук</a></li> <!-- иконка img/svg/fb-icon.svg -->
-        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--youtube" href="" aria-label="Седона на ютубе">Ютуб</a></li> <!-- иконка img/svg/youtube.svg -->
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--tw" href="#" aria-label="Седона в твитере">Твитер</a></li>
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--fb" href="#" aria-label="Седона на фейсбуке">Фэйсбук</a></li>
+        <li class="page-footer__social-item"><a class="page-footer__social-link page-footer__social-link--youtube" href="#" aria-label="Седона на ютубе">Ютуб</a></li>
       </ul>
 
       <p class="page-footer__copyright">Website by

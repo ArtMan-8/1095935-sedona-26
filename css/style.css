@@ -444,7 +444,7 @@ body {
 
 .form-search__text {
   background-color: #f2f2f2;
-  border: none;
+  border: solid 2px #f2f2f2;
   width: 346px;
   height: 38px;
   font-size: 14px;
@@ -473,19 +473,16 @@ body {
   transform: translateY(-50%);
   cursor: pointer;
   background-color: transparent;
+  background-image: url("../img/svg/calendar.svg");
   border: none;
 }
 
-.calendar {
-  fill: #a9a9a9;
+.form-search__calendar:hover {
+  background-image: url("../img/svg/calendar-hover.svg");
 }
 
-.calendar:hover {
-  fill: #000000;
-}
-
-.calendar:active {
-  fill: #81b3d2;
+.form-search__calendar:active {
+  background-image: url("../img/svg/calendar-active.svg");
 }
 
 .form-search__number {
@@ -901,6 +898,14 @@ body {
 .sorted-hotel__link {
   color: #000000;
   text-decoration: none;
+}
+
+.sorted-hotel__link:hover {
+  color: #81b3d2;
+}
+
+.sorted-hotel__link:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .sorted-hotel__description {
