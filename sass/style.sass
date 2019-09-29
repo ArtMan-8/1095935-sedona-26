@@ -55,18 +55,38 @@ body
 .page-header__menu-list
   display: flex
   flex-wrap: wrap
+  vertical-align: middle
   margin: 0
-  padding: 0
+  padding: 0 73px
+
+// .page-header__menu-item
+//   display: flex
+//   width: 239px
+//   min-height: 56px
+//   align-items: center
+//   justify-content: center
+
+//   &:nth-child(4n+2)
+//     margin-right: 244px
 
 .page-header__menu-item
-  display: flex
-  width: 239px
+  width: 240px
   min-height: 56px
-  align-items: center
-  justify-content: center
+  list-style: none
+  padding: 14px 0
+
+  &:nth-child(4n+1)
+    text-align: left
 
   &:nth-child(4n+2)
-    margin-right: 244px
+    text-align: left
+    margin-right: auto
+
+  &:nth-child(4n+3)
+    text-align: right
+
+  &:nth-child(4n+4)
+    text-align: right
 
 .page-header__menu-link
   color: #000000
@@ -377,6 +397,7 @@ body
 
 .form-search__label
   display: inline-block
+  vertical-align: middle
   margin-right: auto
 
   &--children
@@ -562,6 +583,7 @@ body
 
 .form-filter__label
   position: relative
+  cursor: pointer
   font-size: 14px
   line-height: 21px
 
@@ -572,6 +594,7 @@ body
     display: block
     width: 23px
     height: 23px
+    background-color: transparent
     background-image: url("../img/svg/checkbox-off.svg")
     background-repeat: no-repeat
 
@@ -662,24 +685,33 @@ body
 
 .sorted-hotel__arrow
   display: inline-block
+  vertical-align: middle
   font-size: 0
-  width: 10px
-  height: 10px
-  fill: #cacaca
-
-  &:hover
-    fill: #000000
-
-  &:active
-    fill: #81b3d2
-
-  &--active
-    fill: #81b3d2
+  width: 0
+  height: 0
 
   &--up
+    border-bottom: 10px solid #cacaca
+    border-left: 6px solid transparent
+    border-right: 6px solid transparent
 
   &--down
+    border-top: 10px solid #cacaca
+    border-left: 6px solid transparent
+    border-right: 6px solid transparent
     margin-left: 10px
+
+  &--active
+    border-top-color: #81b3d2
+    border-bottom-color: #81b3d2
+
+  &:hover
+    border-top-color: #000000
+    border-bottom-color: #000000
+
+  &:active
+    border-top-color: #81b3d2
+    border-bottom-color: #81b3d2
 
 .sorted-hotel__article
   border-bottom: 1px solid #e6e6e6
@@ -758,8 +790,10 @@ body
   display: block
   font-size: 0
   display: inline-block
+  vertical-align: middle
   height: 20px
   width: 20px
+  background-color: transparent
   background-image: url("../img/svg/star.svg")
   background-repeat: space no-repeat
   margin: 0
@@ -775,7 +809,6 @@ body
     width: 89px
 
 .sorted-hotel__text
-  display: inline-block
   color: #666666
   background-color: #f2f2f2
   padding: 5px 15px
