@@ -26,6 +26,10 @@ body {
   border: none;
 }
 
+.btn:focus {
+  outline: 3px solid orange;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -33,6 +37,10 @@ body {
   margin: -1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
 }
 
 .container__flex-column {
@@ -106,6 +114,10 @@ body {
 
 .page-header__menu-link:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.page-header__menu-link:focus {
+  outline: 3px solid orange;
 }
 
 .page-header__menu-link--current {
@@ -196,6 +208,10 @@ body {
   opacity: 0.3;
 }
 
+.page-footer__social-link:focus {
+  outline: 3px solid orange;
+}
+
 .page-footer__copyright {
   display: flex;
   width: 400px;
@@ -205,7 +221,12 @@ body {
 }
 
 .page-footer__copylink {
+  font-size: 0;
   margin-left: 10px;
+}
+
+.page-footer__copylink:focus {
+  outline: 3px solid orange;
 }
 
 .page-footer__copylogo {
@@ -661,6 +682,10 @@ body {
   line-height: 21px;
 }
 
+.form-filter__check:focus + .form-filter__label {
+  outline: 3px solid orange;
+}
+
 .form-filter__label {
   position: relative;
   cursor: pointer;
@@ -755,14 +780,18 @@ body {
   background: #ffffff;
 }
 
+.price-controls input:focus {
+  outline: 3px solid orange;
+}
+
 .range-toggle {
   position: absolute;
-  top: -7px;
+  top: -8px;
   width: 4px;
   height: 4px;
   background: #ababab;
   background-image: url("../img/svg/filter-button.svg");
-  border: 9px solid #ffffff;
+  border: 10px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
@@ -792,7 +821,6 @@ body {
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 2px;
-  cursor: pointer;
 }
 
 .form-filter__submit:hover {
@@ -860,6 +888,10 @@ body {
   text-decoration: none;
 }
 
+.sorted-hotel__type-sort:focus {
+  outline: 3px solid orange;
+}
+
 .sorted-hotel__direction {
   margin-left: auto;
 }
@@ -900,6 +932,10 @@ body {
   border-bottom-color: #81b3d2;
 }
 
+.sorted-hotel__arrow:focus {
+  outline: 3px solid orange;
+}
+
 .sorted-hotel__article {
   border-bottom: 1px solid #e6e6e6;
   padding: 30px 72px;
@@ -934,6 +970,10 @@ body {
 
 .sorted-hotel__link:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.sorted-hotel__link:focus {
+  outline: 3px solid orange;
 }
 
 .sorted-hotel__description {
@@ -1020,6 +1060,6 @@ body {
 .sorted-hotel__text {
   color: #666666;
   background-color: #f2f2f2;
-  padding: 5px 15px;
+  padding: 4px 14px;
   margin: 0;
 }

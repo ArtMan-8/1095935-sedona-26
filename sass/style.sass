@@ -21,6 +21,9 @@ body
   cursor: pointer
   border: none
 
+  &:focus
+    outline: 3px solid orange
+
 .visually-hidden
   position: absolute
   width: 1px
@@ -28,6 +31,12 @@ body
   margin: -1px
   overflow: hidden
   clip: rect(0 0 0 0)
+
+  clip-path: inset(100%)
+  padding: 0
+  border: 0
+  white-space: nowrap
+  overflow:hidden
 
 .container__flex-column
   display: flex
@@ -42,6 +51,9 @@ body
   font-weight: bold
   line-height: 26px
   background-color: #82b5d3
+
+.page-header__logo-link
+
 
 .page-header__logo
   margin: auto
@@ -97,6 +109,9 @@ body
 
   &:active
     color: rgba(0, 0, 0, 0.3)
+
+  &:focus
+    outline: 3px solid orange
 
   &--current
     color: #766357
@@ -175,6 +190,8 @@ body
   &:active::before
     opacity: 0.3
 
+  &:focus
+    outline: 3px solid orange
 
 .page-footer__copyright
   display: flex
@@ -184,7 +201,11 @@ body
   align-items: center
 
 .page-footer__copylink
+  font-size: 0
   margin-left: 10px
+
+  &:focus
+    outline: 3px solid orange
 
 .page-footer__copylogo
   fill: #231f20
@@ -581,6 +602,9 @@ body
   font-size: 14px
   line-height: 21px
 
+  &:focus + .form-filter__label
+    outline: 3px solid orange
+
 .form-filter__label
   position: relative
   cursor: pointer
@@ -624,7 +648,6 @@ body
   background: transparent
   border: 2px solid #ffffff
   border-radius: 2px
-  cursor: pointer
 
   &:hover
     color: #000000
@@ -680,6 +703,9 @@ body
     color: #81b3d2
     text-decoration: none
 
+  &:focus
+    outline: 3px solid orange
+
 .sorted-hotel__direction
   margin-left: auto
 
@@ -713,6 +739,9 @@ body
     border-top-color: #81b3d2
     border-bottom-color: #81b3d2
 
+  &:focus
+    outline: 3px solid orange
+
 .sorted-hotel__article
   border-bottom: 1px solid #e6e6e6
   padding: 30px 72px
@@ -741,6 +770,9 @@ body
 
   &:active
     color: rgba(0, 0, 0, 0.3)
+
+  &:focus
+    outline: 3px solid orange
 
 .sorted-hotel__description
   margin: 0
@@ -811,5 +843,5 @@ body
 .sorted-hotel__text
   color: #666666
   background-color: #f2f2f2
-  padding: 5px 15px
+  padding: 4px 14px
   margin: 0

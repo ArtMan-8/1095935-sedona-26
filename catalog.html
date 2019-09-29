@@ -27,11 +27,11 @@
       <h1 class="visually-hidden">Гостиницы городка Седона</h1>
 
       <section class="filter-hotel">
-        <h2 class="visually-hidden" tabindex="0">Подбор гостиниц по критериям</h2>
+        <h2 class="visually-hidden">Подбор гостиниц по критериям</h2>
 
-        <form class="form-filter" action="https://echo.htmlacademy.ru/" method="GET">
+        <form class="form-filter" action="https://echo.htmlacademy.ru/" method="GET" tabindex="0" aria-label="Форма подбора гостиницы">
           <fieldset class="form-filter__set">
-            <legend class="form-filter__legend" tabindex="0">Инфраструктура:</legend>
+            <legend class="form-filter__legend">Инфраструктура:</legend>
             <ul class="form-filter__list">
               <li class="form-filter__row">
                 <input class="form-filter__check visually-hidden" type="checkbox" name="filter-pool" id="filter-pool" checked>
@@ -49,7 +49,7 @@
           </fieldset>
 
           <fieldset class="form-filter__set">
-            <legend class="form-filter__legend" tabindex="0">Тип жилья:</legend>
+            <legend class="form-filter__legend">Тип жилья:</legend>
             <ul class="form-filter__list">
               <li class="form-filter__row">
                 <input class="form-filter__check visually-hidden" type="checkbox" name="filter-hotel" id="filter-hotel" checked>
@@ -83,22 +83,22 @@
               </div>
             </fieldset>
 
-            <button class="form-filter__submit btn" type="submit">Показать</button>
+            <button class="btn form-filter__submit" type="submit">Показать</button>
           </div>
         </form>
       </section>
 
       <section class="sorted-hotel">
-        <h2 class="visually-hidden" tabindex="0">Сортированный список гостиниц</h2>
+        <h2 class="visually-hidden">Сортированный список гостиниц</h2>
 
         <div class="sorted-hotel__found">
           <p class="sorted-hotel__quantity" tabindex="0">Найдено: 3</p>
 
           <ul class="sorted-hotel__list">
             <li class="sorted-hotel__sorting">Сортировка:</li>
-            <li class="sorted-hotel__item"><a class="sorted-hotel__type-sort sorted-hotel__type-sort--active" aria-label="сортировка по цене">по цене</a></li>
-            <li class="sorted-hotel__item"><a class="sorted-hotel__type-sort" href="#" aria-label="сортировка оп типу">по типу</a></li>
-            <li class="sorted-hotel__item"><a class="sorted-hotel__type-sort" href="#" aria-label="сортировка по рейтингу">по рейтингу</a></li>
+            <li class="sorted-hotel__item"><a class="sorted-hotel__type-sort sorted-hotel__type-sort--active" aria-label="Сортировать по цене">по цене</a></li>
+            <li class="sorted-hotel__item"><a class="sorted-hotel__type-sort" href="#" aria-label="Сортировать по типу">по типу</a></li>
+            <li class="sorted-hotel__item"><a class="sorted-hotel__type-sort" href="#" aria-label="Сортировать по рейтингу">по рейтингу</a></li>
           </ul>
 
           <div class="sorted-hotel__direction">
@@ -111,13 +111,13 @@
           <div class="sorted-hotel__content">
             <h3 class="sorted-hotel__header"><a class="sorted-hotel__link" href="#">Amara Resort & Spa</a></h3>
             <div class="container__flex-row">
-              <div class="sorted-hotel__description" tabindex="0" aria-label="Гостиница от 4000 рублей">
+              <div class="sorted-hotel__description">
                 <p class="sorted-hotel__option sorted-hotel__option--type">Гостиница</p>
-                <a class="sorted-hotel__btn sorted-hotel__btn--details" href="#">Подробнее</a>
+                <a class="btn sorted-hotel__btn sorted-hotel__btn--details" href="#">Подробнее</a>
               </div>
               <div class="sorted-hotel__booking">
                 <p class="sorted-hotel__option sorted-hotel__option--price">от 4000 Р.</p>
-                <a class="sorted-hotel__btn sorted-hotel__btn--book" href="#">Забронировать</a>
+                <a class="btn sorted-hotel__btn sorted-hotel__btn--book" href="#">Забронировать</a>
               </div>
             </div>
           </div>
@@ -134,13 +134,13 @@
           <div class="sorted-hotel__content">
             <h3 class="sorted-hotel__header"><a class="sorted-hotel__link" href="#">Desert Quail Inn</a></h3>
             <div class="container__flex-row">
-              <div class="sorted-hotel__description" tabindex="0" aria-label="Гостиница от 4000 рублей">
+              <div class="sorted-hotel__description">
                 <p class="sorted-hotel__option sorted-hotel__option--type">Мотель</p>
-                <a class="sorted-hotel__btn sorted-hotel__btn--details" href="#">Подробнее</a>
+                <a class="btn sorted-hotel__btn sorted-hotel__btn--details" href="#">Подробнее</a>
               </div>
               <div class="sorted-hotel__booking">
                 <p class="sorted-hotel__option sorted-hotel__option--price">от 3000 Р.</p>
-                <a class="sorted-hotel__btn sorted-hotel__btn--book" href="#">Забронировать</a>
+                <a class="btn sorted-hotel__btn sorted-hotel__btn--book" href="#">Забронировать</a>
               </div>
             </div>
           </div>
@@ -157,13 +157,13 @@
           <div class="sorted-hotel__content">
             <h3 class="sorted-hotel__header"><a class="sorted-hotel__link" href="#">Villas at Poco Diablo</a></h3>
             <div class="container__flex-row">
-              <div class="sorted-hotel__description" tabindex="0" aria-label="Гостиница от 4000 рублей">
+              <div class="sorted-hotel__description">
                 <p class="sorted-hotel__option sorted-hotel__option--type">Апартаменты</p>
-                <a class="sorted-hotel__btn sorted-hotel__btn--details" href="#">Подробнее</a>
+                <a class="btn sorted-hotel__btn sorted-hotel__btn--details" href="#">Подробнее</a>
               </div>
               <div class="sorted-hotel__booking">
                 <p class="sorted-hotel__option sorted-hotel__option--price">от 2000 Р.</p>
-                <a class="sorted-hotel__btn sorted-hotel__btn--book" href="#">Забронировать</a>
+                <a class="btn sorted-hotel__btn sorted-hotel__btn--book" href="#">Забронировать</a>
               </div>
             </div>
           </div>
