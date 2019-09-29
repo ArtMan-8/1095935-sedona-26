@@ -460,12 +460,12 @@ body {
 }
 
 .form-search--hide {
-  animation: form-hide 1s forwards;
+  animation: form-hide 0.5s forwards;
   display: none;
 }
 
 .form-search--show {
-  animation: form-show 1s forwards;
+  animation: form-show 0.5s forwards;
 }
 
 @keyframes form-show {
