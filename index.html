@@ -138,7 +138,9 @@
           <button class="form-search__submit btn" type="submit">Найти</button>
         </form>
 
-        <img class="search-hotel__map" src="img/map.png" width="1200" height="594" alt="Карта как проехать к городку Седона">
+        <div class="search-hotel__map" id="map">
+
+        </div>
       </section>
     </main>
 
@@ -159,5 +161,8 @@
         </a>
       </p>
     </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss"></script>
+    <script src="js/search-hotel.js"></script>
   </body>
 </html>
