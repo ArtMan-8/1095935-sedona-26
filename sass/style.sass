@@ -146,6 +146,7 @@ body
   width: 400px
 
 .page-footer__social-item
+    margin-right: 6px
 
 .page-footer__social-link
   position: relative
@@ -153,7 +154,6 @@ body
   color: #ffffff
   width: 46px
   height: 48px
-  margin-right: 6px
   background-color: #81b3d2
   background-repeat: no-repeat
   background-position: center
@@ -195,7 +195,6 @@ body
 .page-footer__copyright
   display: flex
   width: 400px
-  margin: 0
   justify-content: center
   align-items: center
 
@@ -635,6 +634,7 @@ body
     content: ""
     position: absolute
     left: -40px
+    top: -2px
     display: block
     width: 23px
     height: 23px
@@ -652,8 +652,6 @@ body
 
 .form-filter__check:checked:disabled + .form-filter__label::before
   background-image: url("../img/svg/checkbox-on-dis.svg")
-
-
 
 /* кастомный ползунок с цифрами */
 @import "filter-range"
@@ -805,13 +803,13 @@ body
 
 .sorted-hotel__option
   margin: 0
-  margin-bottom: 20px
+  margin-bottom: 12px
 
 .sorted-hotel__btn
+  display: block
   font-weight: bold
   color: #ffffff
-  padding: 4px 17px
-  margin: 0
+  padding: 3px 17px
   text-decoration: none
 
   &--details
@@ -863,7 +861,8 @@ body
     width: 89px
 
 .sorted-hotel__text
+  displey: block
   color: #666666
   background-color: #f2f2f2
-  padding: 4px 14px
+  padding: 3px 13px
   margin: 0
