@@ -1096,7 +1096,7 @@ body {
 }
 
 .sorted-hotel__text {
-  displey: block;
+  display: block;
   color: #666666;
   background-color: #f2f2f2;
   padding: 3px 13px;
