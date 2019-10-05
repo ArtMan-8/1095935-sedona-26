@@ -217,6 +217,7 @@ body {
 .page-footer__copyright {
   display: flex;
   width: 400px;
+  margin: 0;
   justify-content: center;
   align-items: center;
 }
@@ -248,13 +249,13 @@ body {
   background-image: url("../img/svg/intro-mask.svg"), url("../img/svg/intro-welcome.svg"), url("../img/index-bg.jpg");
   background-repeat: no-repeat;
   background-size: 1200px 59px, 459px 353px, 1200px 800px;
-  background-position: center 506px, center 132px, center -28px;
-  height: 563px;
+  background-position: center 507px, center 132px, center -27px;
+  height: 564px;
 }
 
 .features__title {
   padding-top: 60px;
-  padding-bottom: 52px;
+  padding-bottom: 50px;
   width: 500px;
   margin: 0 auto;
 }
@@ -393,7 +394,7 @@ body {
 }
 
 .more {
-  padding: 46px 60px 63px;
+  padding: 46px 60px 60px;
   min-height: 256px;
   background-color: #efefef;
 }
@@ -409,7 +410,7 @@ body {
 .search-hotel__header {
   margin: 0 auto;
   font-size: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .search-hotel__text {
@@ -425,7 +426,13 @@ body {
   background-image: url("../img/map.png");
 }
 
+.map-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 .form-search-show {
+  position: relative;
   padding: 30px;
   width: 568px;
   font-weight: bold;
@@ -434,6 +441,8 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   background-color: #766357;
+  z-index: 2;
+  overflow: hidden;
 }
 
 .form-search-show:hover {
@@ -458,26 +467,26 @@ body {
   padding: 55px;
   background-color: #ffffff;
   box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
-  z-index: 1;
 }
 
 .form-search--hide {
   animation: form-hide 0.5s forwards;
-  display: none;
 }
 
 .form-search--show {
   animation: form-show 0.5s forwards;
 }
 
+.form-search--error {
+  animation: shake 0.5s;
+}
+
 @keyframes form-show {
   0% {
     transform: translateY(-100%);
-    opacity: 0;
   }
   100% {
     transform: translateY(0);
-    opacity: 1;
   }
 }
 
@@ -488,6 +497,27 @@ body {
   100% {
     transform: translateY(-100%);
     box-shadow: none;
+    transform-origin: top;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
 
@@ -541,7 +571,7 @@ body {
 .form-search__calendar {
   position: absolute;
   display: block;
-  right: 15px;
+  right: 10px;
   height: 22px;
   width: 21px;
   top: 50%;
@@ -751,6 +781,11 @@ body {
   background-image: url("../img/svg/checkbox-on-dis.svg");
 }
 
+.form-filter__check:disabled + .form-filter__label,
+.form-filter__check:checked:disabled + .form-filter__label {
+  color: #6a6a6a;
+}
+
 /* кастомный ползунок с цифрами */
 .price-controls {
   position: relative;
@@ -830,8 +865,7 @@ body {
 }
 
 .range-toggle:hover {
-  width: 22px;
-  height: 22px;
+  transform: scale(1.1);
   background: #1c4f80;
 }
 

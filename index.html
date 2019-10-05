@@ -35,7 +35,7 @@
             <div class="features__content">
               <h3 class="features__subheader">Настоящий городок</h3>
               <span class="features__number">№1</span>
-              <p class="features__description">Седона - не аттракцион для туристов, там&nbsp;течёт своя жизнь</p>
+              <p class="features__description">Седона — не аттракцион для туристов, там&nbsp;течёт своя жизнь</p>
             </div>
             <div class="features__foto">
               <img class="foto-right" src="img/feature-1.jpg" width="800" height="256" alt="Фотография городка Седона">
@@ -98,52 +98,54 @@
         <h2 class="search-hotel__header">Заинтересовались?</h2>
         <p class="search-hotel__text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 
-        <button class="form-search-show btn" type="button">Поиск гостиницы в Седоне</button>
-        <form class="form-search form-search--show" action="https://echo.htmlacademy.ru/" method="GET">
-          <div class="form-search__row">
-            <label class="form-search__label" for="date-arrival">Дата заезда:</label>
-            <input class="form-search__text" id="date-arrival" name="date-arrival" type="text" placeholder="24 апреля 2017" required>
-            <button class="form-search__calendar" type="button">
-              <span class="visually-hidden">календарь</span>
-            </button>
-          </div>
-
-          <div class="form-search__row">
-            <label class="form-search__label" for="date-leave">Дата выезда:</label>
-            <input class="form-search__text" id="date-leave" name="date-leave" type="text" placeholder="4 июля 2017" required>
-            <button class="form-search__calendar" type="button">
-              <span class="visually-hidden">календарь</span>
-            </button>
-          </div>
-
-          <div class="form-search__row">
-            <div class="form-search__age">
-              <label class="form-search__label form-search__label--adult" for="adult-ticket">Взрослые:</label>
-              <button class="btn btn--control btn--minus" type="button">
-                <span class="visually-hidden">уменьшить количество взрослых</span>
-              </button>
-              <input class="form-search__number" id="adult-ticket" name="adult-ticket" type="text" title="Введите количество взрослых от 0 до 9" pattern="[0-9]{0,1}" placeholder="2" required>
-              <button class="btn btn--control btn--plus" type="button">
-                <span class="visually-hidden">увеличить количество взрослых</span>
+        <div class="map-wrapper">
+          <button class="form-search-show btn" type="button">Поиск гостиницы в Седоне</button>
+          <form class="form-search form-search--show" action="https://echo.htmlacademy.ru/" method="GET">
+            <div class="form-search__row">
+              <label class="form-search__label" for="date-arrival">Дата заезда:</label>
+              <input class="form-search__text" id="date-arrival" name="date-arrival" type="text" placeholder="24 апреля 2017">
+              <button class="form-search__calendar" type="button">
+                <span class="visually-hidden">календарь</span>
               </button>
             </div>
-            <div class="form-search__age">
-              <label class="form-search__label form-search__label--children" for="children-ticket">Дети:</label>
-              <button class="btn btn--control btn--minus" type="button">
-                <span class="visually-hidden">уменьшить количество детей</span>
-              </button>
-              <input class="form-search__number" id="children-ticket" name="children-ticket" type="text" title="Введите количество детей от 0 до 9" pattern="[0-9]{0,1}" placeholder="0" required>
-              <button class="btn btn--control btn--plus" type="button">
-                <span class="visually-hidden">увеличить количество детей</span>
+
+            <div class="form-search__row">
+              <label class="form-search__label" for="date-leave">Дата выезда:</label>
+              <input class="form-search__text" id="date-leave" name="date-leave" type="text" placeholder="4 июля 2017">
+              <button class="form-search__calendar" type="button">
+                <span class="visually-hidden">календарь</span>
               </button>
             </div>
+
+            <div class="form-search__row">
+              <div class="form-search__age">
+                <label class="form-search__label form-search__label--adult" for="adult-ticket">Взрослые:</label>
+                <button class="btn btn--control btn--minus" type="button">
+                  <span class="visually-hidden">уменьшить количество взрослых</span>
+                </button>
+                <input class="form-search__number" id="adult-ticket" name="adult-ticket" type="text" title="Введите количество взрослых от 0 до 9" pattern="[0-9]{0,1}" placeholder="2">
+                <button class="btn btn--control btn--plus" type="button">
+                  <span class="visually-hidden">увеличить количество взрослых</span>
+                </button>
+              </div>
+              <div class="form-search__age">
+                <label class="form-search__label form-search__label--children" for="children-ticket">Дети:</label>
+                <button class="btn btn--control btn--minus" type="button">
+                  <span class="visually-hidden">уменьшить количество детей</span>
+                </button>
+                <input class="form-search__number" id="children-ticket" name="children-ticket" type="text" title="Введите количество детей от 0 до 9" pattern="[0-9]{0,1}" placeholder="0">
+                <button class="btn btn--control btn--plus" type="button">
+                  <span class="visually-hidden">увеличить количество детей</span>
+                </button>
+              </div>
+            </div>
+
+            <button class="form-search__submit btn" type="submit">Найти</button>
+          </form>
+
+          <div class="search-hotel__map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d840735.277484057!2d-111.67046583593752!3d34.601071898338255!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1570218778407!5m2!1sru!2sru" width="1200" height="593" style="border:0;" allowfullscreen="" tabindex="-1"></iframe>
           </div>
-
-          <button class="form-search__submit btn" type="submit">Найти</button>
-        </form>
-
-        <div class="search-hotel__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d498028.36253111163!2d-111.6704653920826!3d34.912473126420636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1569772122513!5m2!1sru!2sru" width="100%" height="593" frameborder="0" style="border:0;" allowfullscreen="" tabindex="-1"></iframe>
         </div>
       </section>
     </main>
