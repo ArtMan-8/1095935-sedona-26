@@ -217,6 +217,7 @@ body {
   display: flex;
   width: 400px;
   margin: 0;
+  line-height: 26px;
   justify-content: center;
   align-items: center;
 }
@@ -271,6 +272,7 @@ body {
   line-height: 26px;
   text-align: center;
   margin: 0;
+  color: #333333;
 }
 
 .features__list {
@@ -390,6 +392,8 @@ body {
 .promo__text {
   width: 290px;
   margin: 0 auto;
+  padding-bottom: 80px;
+  color: #333333;
 }
 
 .more {
@@ -398,9 +402,35 @@ body {
   background-color: #efefef;
 }
 
+.more__subheader {
+  font-weight: bold;
+  font-size: 21px;
+  width: 160px;
+  margin: 0 auto;
+}
+
+.more__number {
+  color: #333333;
+}
+
+.more__number::before {
+  content: "\2012";
+  margin-right: 5px;
+}
+
+.more__number::after {
+  content: "\2012";
+  margin-left: 5px;
+}
+
+.more__description {
+  color: #333333;
+  margin: 0 auto;
+}
+
 .search-hotel {
   position: relative;
-  padding-top: 57px;
+  padding-top: 50px;
   background-color: #ffffff;
   text-align: center;
   margin-bottom: -120px;
@@ -409,7 +439,8 @@ body {
 .search-hotel__header {
   margin: 0 auto;
   font-size: 30px;
-  margin-bottom: 32px;
+  line-height: 36px;
+  margin-bottom: 23px;
 }
 
 .search-hotel__text {
@@ -417,6 +448,7 @@ body {
   width: 450px;
   margin: 0 auto;
   margin-bottom: 48px;
+  color: #333333;
 }
 
 .search-hotel__map {
@@ -809,8 +841,8 @@ body {
 .price-controls label {
   display: inline-block;
   font-size: 14px;
-  line-height: 28px;
-  vertical-align: middle;
+  line-height: 21px;
+  margin-top: 5px;
   cursor: pointer;
 }
 
@@ -886,7 +918,7 @@ body {
   margin: 0 auto;
   padding: 6px 32px;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 21px;
   color: #ffffff;
   text-transform: uppercase;
   background: transparent;
@@ -920,7 +952,7 @@ body {
 
 .sorted-hotel__sorting {
   font-size: 12px;
-  line-height: 16px;
+  line-height: 18px;
   margin-right: 40px;
 }
 
@@ -1028,11 +1060,13 @@ body {
   font-weight: bold;
   font-size: 21px;
   margin: 0;
+  margin-top: -5px;
 }
 
 .sorted-hotel__link {
   color: #000000;
   text-decoration: none;
+  line-height: 26px;
 }
 
 .sorted-hotel__link:hover {
@@ -1059,6 +1093,7 @@ body {
 .sorted-hotel__option {
   margin: 0;
   margin-bottom: 12px;
+  color: #333333;
 }
 
 .sorted-hotel__btn {
