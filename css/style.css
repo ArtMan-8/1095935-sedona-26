@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /* common style */
 html {
-  padding: 0 20px;
   box-sizing: border-box;
 }
 
@@ -450,7 +449,7 @@ body {
 }
 
 .form-search-show:active {
-  color: #938b86;
+  color: rgba(255, 255, 255, 0.3);
   background-color: #4f3c30;
 }
 
@@ -672,7 +671,7 @@ body {
 }
 
 .form-search__submit:active {
-  color: #95bad3;
+  color: rgba(255, 255, 255, 0.3);
   background-color: #5397be;
 }
 
